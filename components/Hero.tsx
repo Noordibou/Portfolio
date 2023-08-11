@@ -14,7 +14,7 @@ export default function Hero() {
         ],
         loop: true,
         delaySpeed: 1500,
-        typeSpeed: 150,
+       
     });
     return (
         <div>
