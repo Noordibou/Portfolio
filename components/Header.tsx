@@ -12,8 +12,9 @@ export default function Header() {
                 className='flex flex-row items-center'>
                 {/* Logo */}
                 <SocialIcon url="https://www.linkedin.com/in/noordibou/" bgColor="transparent" fgColor="grey" />
-                <SocialIcon url="https://www.linkedin.com/in/noordibou/" bgColor="transparent" fgColor="grey" />
-                <SocialIcon url="https://www.linkedin.com/in/noordibou/" bgColor="transparent" fgColor="grey" />
+                <SocialIcon url="https://github.com/Noordibou" 
+                bgColor="transparent" fgColor="grey" />
+                
             </motion.div>
             <motion.div
                 initial={{ x: 500, opacity: 0, scale: 0.5 }}
