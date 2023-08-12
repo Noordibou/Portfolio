@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
-import ContactMe from '../components/ContactMe';
+import Contact from '../components/Contact';
 import Link from 'next/link';
 
 
@@ -35,13 +35,13 @@ export default function Home() {
         </section>
 
         <section className='snap-start' id='contact'>
-          < ContactMe />
+          < Contact />
         </section>
 
         <Link href='#hero'>
           <footer className='sticky bottom-3 w-full cursor-pointer'>
           <div className='flex p-4'>
-            <img src='https://img.icons8.com/material-sharp/24/home.png' alt='' className='w-10 h-10 filter grayscale hover:grayscale-0 cursor-pointer' />
+            <img src='https://img.icons8.com/sf-black/64/FAB005/home.png' alt='' className='w-10 h-10 filter grayscale hover:grayscale-0 cursor-pointer' />
             </div>
           </footer>
         </Link>
