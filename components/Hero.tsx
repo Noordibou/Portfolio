@@ -14,7 +14,7 @@ export default function Hero() {
         ],
         loop: true,
         delaySpeed: 1500,
-       
+
     });
     return (
         <div>
@@ -27,24 +27,14 @@ export default function Hero() {
                         Software Engineer
                     </h2>
                     <div>
-                    <h1 className='text-2xl lg:text-3xl font semibold px-10 w-[700px]'>
-                        <span className='mr-3 pd-6' >{text}</span>
-                        <Cursor cursorColor='#F7AB0A' />
-                    </h1>
-                    </div>
-                    <div className=' pt-10'>
-                        <Link href={"#about"}>
-                            <button className='heroButton'>About</button>
-                        </Link>
-                        <Link href={"#skills"}>
-                            <button className='heroButton'>Skills</button>
-                        </Link>
-                        <Link href={"#projects"}>
-                            <button className='heroButton'>Projects</button>
-                        </Link>
-                        </div>
+                        <h1 className='text-2xl lg:text-3xl font-bodyFont px-10 w-[700px]'>
+                            <span className='mr-3 pd-6' >{text}</span>
+                            <Cursor cursorColor='#F7AB0A' />
+                        </h1>
+
                     </div>
                 </div>
             </div>
+        </div>
     )
 }

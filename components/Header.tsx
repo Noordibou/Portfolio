@@ -1,35 +1,40 @@
 import React from 'react'
-import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { EnvelopeIcon } from '@heroicons/react/24/solid';
 
 export default function Header() {
+   
     return (
-        <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
+        <header
+            // className='sticky top-0 w-full shadow-navbarShadow h-20 lg:h-[12vh] z-50 bg-bodyColor px-4 '>
+            className='sticky top-0 p-3 flex shadow-navbarShadow items-start justify-between lg:h-[12hv] mx-auto z-50 xl:items-center'>
             <motion.div
-                initial={{ x: -500, opacity: 0, scale: 0.5 }}
+                initial={{ x: -100, opacity: 0, scale: 0.5 }}
                 animate={{ x: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5 }}
                 className='flex flex-row items-center'>
-                {/* Logo */}
-                <SocialIcon url="https://www.linkedin.com/in/noordibou/" bgColor="transparent" fgColor="grey" />
-                <SocialIcon url="https://github.com/Noordibou"
-                    bgColor="transparent" fgColor="grey" />
+                <Link href='#hero'>
+                <img src="https://img.icons8.com/external-others-inmotus-design/67/000000/external-N-kid-alphabet-others-inmotus-design-2.png"  alt='' className='w-14 h-14  filter grayscale hover:grayscale-0 cursor-pointer' />
+                </Link>
             </motion.div>
-            <div>
+            <div className='hidden md:inline-flex items-center space-x-5 px-5'>
                 <motion.div
                     initial={{ x: 500, opacity: 0, scale: 0.5 }}
                     animate={{ x: 0, opacity: 1, scale: 1 }}
                     transition={{ duration: 1.5 }}
-                >
-                    <Link href='#contact' >
-                        <div className='flex items-center space-x-2 justify-center cursor-pointer'>
-                            <EnvelopeIcon className='text-gray-500 w-7 h-7' />
-                            <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get in Touch</p>
-                        </div>
-                    </Link>
+                    className='max-w-container h-full mx-auto py-5 font-titleFont flex items-center space-x-5 justify-between uppercase text-textDark cursor-pointer'>
+                    <Link className=' hover:text-textGreen' href='#about'> About </Link>
+                    <Link className=' hover:text-textGreen' href='#skills'> Skills </Link>
+                    <Link className=' hover:text-textGreen' href='#projects' > Projects </Link>
+                    <Link className=' hover:text-textGreen' href='#contact' >Contact</Link>
                 </motion.div>
+                <motion.button
+                    initial={{ x: 500, opacity: 0, scale: 0.5 }}
+                    animate={{ x: 0, opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5 }}
+                    className='py-2 px-4  font-titleFont rounded-md border border-textGreen hover:bg-hoverColor flex items-center justify-between uppercase text-textDark cursor-pointer'>
+                    Resume
+                </motion.button>
             </div>
         </header>
     );
