@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <header
             // className='sticky top-0 w-full shadow-navbarShadow h-20 lg:h-[12vh] z-50 bg-bodyColor px-4 '>
-            className='sticky top-0 p-3 flex shadow-navbarShadow bg-bodyColor items-start justify-between lg:h-[12hv] mx-auto z-50 xl:items-center'>
+            className='sticky p-3 flex shadow-navbarShadow bg-bodyColor items-start justify-between lg:h-[12hv] mx-auto z-50 xl:items-center'>
             <motion.div
                 initial={{ x: -100, opacity: 0, scale: 0.5 }}
                 animate={{ x: 0, opacity: 1, scale: 1 }}

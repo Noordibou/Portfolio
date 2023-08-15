@@ -1,8 +1,6 @@
 import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import BackgroundCircles from './BackgroundCircles';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
@@ -12,16 +10,16 @@ export default function Hero() {
     ]
     return (
         <section
-            className='relative max-w-contentContainer mx-auto py-20 lgl:py-32 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4 top-24 z-0'>
+            className='relative max-w-contentContainer mx-auto py-20 lgl:py-32 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4 z-0'>
             <div className='flex flex-col lgl:flex-row gap-16'>
-                <div className='w-full lgl:w-2/3 text-base text-textDark flex flex-col gap-4'>
+                <div className='w-full lgl:w-2/3 flex flex-col gap-4'>
                     <motion.h1
                         initial={{ y: -10, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.7 }}
-                        className='relative font-titleFont font-semibold tracking-[25px] flex flex-col text-5xl md:text-7xl lgl:text-9xl'
+                        className='relative font-titleFont font-semibold tracking-[25px] flex flex-col text-5xl md:text-7xl lgl:text-7xl'
                     >
-                        Noor <span className='display: flex flex-direction: column'> Dibou</span>
+                        Noor <span className='flex flex-col'> Dibou</span>
                     </motion.h1>
                     <div className='z-20'>
                         <h2 className='text-sm uppercase text-textGreen pt-4 pb-6 tracking-[8px] mdl:tracking-[10px] lgl:tracking-[20px]'>
@@ -29,7 +27,7 @@ export default function Hero() {
                         </h2>
                     </div>
                     <div>
-                        <div className='relative mr-3 pd-2 text-2xl lgl:text-3xl ' > {text.map((line, index) => (
+                        <div className='relative mr-3 pd-2 text-xl lgl:text-2xl text-textDark ' > {text.map((line, index) => (
                             <div key={index}>{line}</div>
                         ))} </div>
                         <Cursor cursorColor='bg-textGreen' />
