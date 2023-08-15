@@ -7,14 +7,14 @@ export default function Header() {
     return (
         <header
             // className='sticky top-0 w-full shadow-navbarShadow h-20 lg:h-[12vh] z-50 bg-bodyColor px-4 '>
-            className='sticky top-0 p-3 flex shadow-navbarShadow items-start justify-between lg:h-[12hv] mx-auto z-50 xl:items-center'>
+            className='sticky top-0 p-3 flex shadow-navbarShadow bg-bodyColor items-start justify-between lg:h-[12hv] mx-auto z-50 xl:items-center'>
             <motion.div
                 initial={{ x: -100, opacity: 0, scale: 0.5 }}
                 animate={{ x: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5 }}
                 className='flex flex-row items-center'>
                 <Link href='#hero'>
-                <img src="https://img.icons8.com/external-others-inmotus-design/67/000000/external-N-kid-alphabet-others-inmotus-design-2.png"  alt='' className='w-14 h-14  filter grayscale hover:grayscale-0 cursor-pointer' />
+                <h1 className='text-4xl lgl:text-5xl font-titleFont  text-textGreen hover:text-textDark cursor-pointer'>ND</h1>
                 </Link>
             </motion.div>
             <div className='hidden md:inline-flex items-center space-x-5 px-5'>

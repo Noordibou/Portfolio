@@ -6,10 +6,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    maxWidth: {
+      container: '1440px',
+      contentContainer: '1140px',
+      containerSmaller: '1024px',
+      containerxs: '768px',
+    },
     extend: {
       fontFamily: {
-        bodyFont: ['Montserrat', 'sans - serif'],
-        titleFont: ['Inter', 'sans- serif'],
+        titleFont: ['Playfair Display', 'serif'],
+        bodyFont: ['Inter', 'sans- serif'],
+        orb: ['Orbitron', 'sans- serif'],
+        
       },
       boxShadow: {
         navbarShadow: '0px 10px 30px -10px rgba(2, 12, 27, 0.7)',
