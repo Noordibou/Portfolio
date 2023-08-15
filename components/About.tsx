@@ -16,7 +16,7 @@ export default function About() {
           <div className='space-y-8 px-0 md:px-4'>
             <h4 className='text-4xl font-titleFont'>Here you will find {''}
               <span className='underline decoration-[#F7AB0A]/50'>more</span> {''} information about me </h4>
-            <p className=' font-bodyFont'> I am a biochemistry-trained software engineer passionate about environmental issues, animal welfare, and sustainability. With a unique combination of scientific expertise and software engineering skills, I’m passionate about developing  innovative solutions that bridge the gap between technology and environmental science. I am driven by the opportunity to make a positive impact by creating software applications and tools that empower individuals, organizations, and institutions to address environmental challenges and promote a more sustainable future.</p>
+            <p className='text-xl font-bodyFont'> I am a biochemistry-trained software engineer passionate about environmental issues, animal welfare, and sustainability. With a unique combination of scientific expertise and software engineering skills, I’m passionate about developing  innovative solutions that bridge the gap between technology and environmental science. I am driven by the opportunity to make a positive impact by creating software applications and tools that empower individuals, organizations, and institutions to address environmental challenges and promote a more sustainable future.</p>
           </div>
         </div>
       </div> 
