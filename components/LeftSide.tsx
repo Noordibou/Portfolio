@@ -14,7 +14,7 @@ export default function LeftSide() {
             transition={{ duration: 1.5 }}
             className=' h-full flex flex-col items-center justify-end cursor-pointer gap-2 '>
             <div className='flex flex-col gap-2 '>
-                <a href='https://www.linkedin.com/in/noordibou/' target='_blank'>
+                <a href='https://github.com/Noordibou' target='_blank'>
                     <span className='w-10 h-10 inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300'>
                         <BsGithub size={24} />
                     </span>

@@ -23,10 +23,10 @@ module.exports = {
         navbarShadow: '0px 10px 30px -10px rgba(2, 12, 27, 0.7)',
       },
       colors: {
-        bodyColor: '#0A192F',
-        textGreen: '#64FFDA',
-        textLight: '#ccd6f6',
-        textDark: '#8892b0',
+        bodyColor: '#120F0D',
+        textGreen: '#D63D21',
+        textLight: '#EE8B7A',
+        textDark: '#D9C7BD',
         hoverColor: 'rgba(100, 255, 218, 0.1)',
       },
       screens: {
