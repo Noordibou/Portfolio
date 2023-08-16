@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useTransition, animated } from 'react-spring';
+// import { useTransition, animated } from 'react-spring';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -20,11 +20,11 @@ export default function Hero() {
         return () => clearInterval(interval);
     }, []);
 
-    const transitions = useTransition(currentTextIndex, {
-        from: { opacity: 0 },
-        enter: { opacity: 1 },
-        leave: { opacity: 0 },
-    });
+    // const transitions = useTransition(currentTextIndex, {
+    //     from: { opacity: 0 },
+    //     enter: { opacity: 1 },
+    //     leave: { opacity: 0 },
+    // });
 
 
     return (
@@ -47,11 +47,11 @@ export default function Hero() {
         
                 <div>
                     <div className='relative mr-3 pd-2 text-xl lgl:text-2xl text-textDark'>
-                    {transitions((style, item) => (
+                    {/* {transitions((style, item) => (
                             <animated.div key={item} style={{ ...style, position: 'absolute' }}>
                               Hello, my name is Noor Dibou, I'm a <span className='text-textLight'> {text[item]}</span>
-                            </animated.div>
-                        ))}
+                            </animated.div> */}
+                        {/* ))} */}
                     </div>
                 </div>
                 </div>
