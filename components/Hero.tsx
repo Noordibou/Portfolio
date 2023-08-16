@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { useTransition, animated } from 'react-spring';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -15,16 +14,10 @@ export default function Hero() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentTextIndex((prevIndex) => (prevIndex + 1) % text.length);
-        }, 7000); // Change text every 5 seconds
+        }, 5000); // Change text every 5 seconds
 
         return () => clearInterval(interval);
-    }, []);
-
-    // const transitions = useTransition(currentTextIndex, {
-    //     from: { opacity: 0 },
-    //     enter: { opacity: 1 },
-    //     leave: { opacity: 0 },
-    // });
+    }, [text.length]);
 
 
     return (
@@ -47,11 +40,14 @@ export default function Hero() {
         
                 <div>
                     <div className='relative mr-3 pd-2 text-xl lgl:text-2xl text-textDark'>
-                    {/* {transitions((style, item) => (
-                            <animated.div key={item} style={{ ...style, position: 'absolute' }}>
-                              Hello, my name is Noor Dibou, I'm a <span className='text-textLight'> {text[item]}</span>
-                            </animated.div> */}
-                        {/* ))} */}
+                    {text.map((line, index) => (
+                            <div
+                                key={index}
+                                className={`animated-text ${index === currentTextIndex ? 'visible' : 'hidden'}`}
+                            >
+                               Hello, my name is Noor Dibou, I'm a <span className='text-textLight'> {line} </span>
+                    </div>
+                    ))}
                     </div>
                 </div>
                 </div>
