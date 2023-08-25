@@ -33,7 +33,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, imageUrl, description, t
             </Link>
             <div className='w-full xl:w-1/2 flex flex-col gap-6 items-end justify-between xl:-ml-16 z-10'>
                 <h3 className='text-2xl font-bold tracking-wide'>{title}</h3>
-                <p className='bg-[#4A4B4F]  text-sm md:text-base p-2 md:p-6 rounded-md'>{description}</p>
+                <p className='bg-[#4A4B4F] text-sm md:text-base p-2 md:p-6 rounded-md'>{description}</p>
                 <ul className='text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark pl-14'>
                     {techStack.map((tech, index) => (
                         <li key={index}>{tech}</li>
@@ -54,7 +54,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, imageUrl, description, t
     </div>
 );
 
-const Projects: React.FC<Props> = ({ directionLeft }) => {
+const Projects: React.FC<Props> = () => {
     const projects = [
         {
             title: 'Caffeine Chronicles',
@@ -101,24 +101,3 @@ const Projects: React.FC<Props> = ({ directionLeft }) => {
 export default Projects;
 
 
-{/* <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-                {projects.map((project, i) => (
-                    <div key={project} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center  h-screen'>
-                        <motion.img 
-                        initial={{ y: -300, opacity: 0 }}
-                        transition={{ duration: 1 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true}}
-                        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_bSUTMQ8gGyZ7zpQtnifEZrcLeuNuC0HseA&usqp=CAU' alt='' />
-                        <div  className='space-y-10 px-0 md:px-10 max-w-6xl' >
-                            <h4 className='text-4xl font-semibold text-center'>
-                                <span className='underline decoration-[#F7AB0A]/50'>
-                                Case Study {i + 1} of {projects.length}:</span> {' '} Project Name
-                            </h4>
-                            <p className='text-lg text-center md:text-left'>
-                                lorim ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                            </p>
-                        </div>
-                    </div>
-                ))}
-            </div> */}
