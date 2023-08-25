@@ -23,9 +23,9 @@ export default function Home() {
 
         <Header />
 
-        <div className='w-full h-[88hv] xl:flex items-center justify-between px-10 gap-20 '>
+        <div className='w-full h-[88hv] xl:flex items-center justify-between  gap-20 '>
 
-          <div className='hidden lg:inline-flex w-24 h-full fixed left-0 bottom-0 md-24 px-2'>
+          <div className='hidden lg:inline-flex w-32 h-full fixed left-0 bottom-0 md-24 px-2'>
             <LeftSide />
           </div>
 

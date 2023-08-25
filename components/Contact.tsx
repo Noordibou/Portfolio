@@ -25,9 +25,9 @@ const ContactMe: React.FC<Props> = () => {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className='h-screen relative flex flex-col text-center items-center md:text-left md:flex-row max-w-7xl mx-auto px-5 md:px-10 justify-evenly mt-36 py-24  pb-20'>
+            className='h-screen relative flex flex-col text-center items-center md:text-left md:flex-row max-w-7xl mx-auto px-5 md:px-10 justify-evenly mt-36 pt-8 pb-20'>
 
-            <h3 className='absolute top-[10%] lgl:top-[5%] lg:top-[5%] flex font-titleFont md:text-3xl text-sm font-semibold items-center uppercase tracking-[10px] md:tracking-[20px] text-textGreen '>Get In Touch</h3>
+            <h3 className='absolute top-[5%] lgl:top-[5%] lg:top-[5%] flex font-titleFont md:text-3xl text-sm font-semibold items-center uppercase tracking-[10px] md:tracking-[20px] text-textGreen '>Get In Touch</h3>
 
             <div className='flex flex-col space-y-8 ' >
                 <h4 className='text-md md:text-3xl font-semibold text-center'>Whether you have an idea for a project or just want to chat,{' '}<span className='decoration-textGreen/50 underline'>feel free to shoot me an email!</span></h4>

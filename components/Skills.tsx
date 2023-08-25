@@ -46,40 +46,42 @@ const skillsData: Skill[] = [
     title: 'Express.js',
   },
   {
-    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/postgreesql.png',
-    title: 'PostgreSQL',
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/api-settings.png',
+    title: 'RESTful API',
   },
+  {
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/ubuntu.png',
+    title: 'Ubuntu',
+  },
+  
   {
     icon: 'https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/FFFFFF/external-mongodb-a-cross-platform-document-oriented-database-program-logo-bold-tal-revivo.png',
     title: 'MongoDB',
   },
   {
-    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/git.png',
-    title: 'Git',
-  },
-  {
-    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/github.png',
-    title: 'GitHub',
-  },
-  {
-    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/visual-studio.png',
-    title: 'VS Code',
-  },
-  {
-    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/ubuntu.png',
-    title: 'Ubuntu',
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/postgreesql.png',
+    title: 'PostgreSQL',
   },
   {
     icon: 'https://img.icons8.com/material-rounded/24/FFFFFF/tailwind_css.png',
     title: 'Tailwind',
   },
   {
-    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/api-settings.png',
-    title: 'RESTful API',
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/visual-studio.png',
+    title: 'VS Code',
   },
+  
   {
     icon: 'https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/FFFFFF/external-bootstrap-a-free-and-open-source-css-framework-logo-bold-tal-revivo.png',
     title: 'Bootstrap',
+  },
+  {
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/github.png',
+    title: 'GitHub',
+  },
+  {
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/git.png',
+    title: 'Git',
   },
 ];
 
@@ -92,23 +94,23 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
       }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, x: 0 }}
-      className='relative top-36 py-36 lgl:py-32 mdl:py-24 mb-10 pr-10  flex flex-col gap-20'
+      className='relative top-36 py-36 lgl:py-32 mdl:py-24 mb-10 flex flex-col gap-10'
     >
       <Section title="My Toolbox" />
-      <div className='flex flex-col lgl:flex-row pl-8 py-20'>
+      <div className='flex flex-col lgl:flex-row pl-2 py-10 '>
         <div className='grid grid-cols-3 lgl:grid-cols-7 md:grid-cols-4 gap-4 items-center justify-center h-full text-md font-bodyFont group relative z-40'>
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className='hover:text-textLight text-xs  md:text-lg cursor-pointer hover:-translate-y-2 transition-all duration-300'
+              className='hover:text-textLight text-xs md:text-lg px-2 cursor-pointer hover:-translate-y-2 transition-all duration-300'
             >
-              <Image width={35} height={35} src={skill.icon} alt={skill.title} />
-              <p>{skill.title}</p>
+              <Image width={40} height={40} src={skill.icon} alt={skill.title} />
+              <p className='text-xs '>{skill.title}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className='w-full absolute top-[30%] md:top-[25%] lgl:top-[35%]  bg-textGreen/25  left-0 h-[550px] md:h-[650px] lgl:h-[400px] lgl:skew-x-0 z-0' />
+      <div className='w-full absolute top-[28%] md:top-[25%] lgl:top-[35%]  bg-textGreen/30 rounded-md left-0 h-[500px] md:h-[500px] lgl:h-[400px] lgl:skew-x-0 z-0' />
     </motion.div>
   );
 };

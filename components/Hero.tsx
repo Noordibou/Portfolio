@@ -22,7 +22,7 @@ export default function Hero() {
 
     return (
         <section
-        className='relative max-w-contentContainer  mx-auto py-20 lgl:py-32 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4 z-0'>
+        className='relative max-w-contentContainer  mx-auto py-20 lgl:py-32 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4  z-0'>
         <motion.div className='flex flex-col lgl:flex-row gap-10'
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -51,9 +51,9 @@ export default function Hero() {
                     </div>
                 </div>
                 </div>
-                <div className='w-full lgl:w-1/3 lgl:top-24 relative group mt-2'>
+                <div className='w-full lgl:w-1/3 lgl:top-24 relative group mt-2 '>
                     <div className='absolute w-80 h-96 -top-6 -left-6 rounded-lg'>
-                        <div className='w-full h-full relative z-20 flex pl-6 lgl:pl-0'>
+                        <div className='w-full h-full relative z-20 flex pl-6  lgl:pl-0'>
                             <Image
                                 className='rounded-lg h-full object-cover'
                                 src='/nd1.jpg'

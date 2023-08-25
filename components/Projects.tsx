@@ -18,7 +18,7 @@ type Props = {
 };
 
 const Project: React.FC<ProjectProps> = ({ title, href, imageUrl, description, techStack }) => (
-    <div className=' w-full flex flex-col items-center justify-center gap-8 my-4'>
+    <div className=' w-full flex flex-col items-center justify-center gap-8 '>
         <div className='flex flex-col xl:flex-row gap-2'>
             <Link className='w-full xl:w-1/2 h-auto relative group' href={href} target='_blank'>
                 <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
@@ -33,7 +33,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, imageUrl, description, t
             </Link>
             <div className='w-full xl:w-1/2 flex flex-col gap-6 items-end justify-between xl:-ml-16 z-10'>
                 <h3 className='text-2xl font-bold tracking-wide'>{title}</h3>
-                <p className='bg-[#4A4B4F] text-sm md:text-base p-2 md:p-6 rounded-md'>{description}</p>
+                <p className='bg-[#4A4B4F]  text-sm md:text-base p-2 md:p-6 rounded-md'>{description}</p>
                 <ul className='text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark pl-14'>
                     {techStack.map((tech, index) => (
                         <li key={index}>{tech}</li>
@@ -85,7 +85,7 @@ const Projects: React.FC<Props> = ({ directionLeft }) => {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className='relative max-w-contentContainer mx-auto top-36  lgl:py-36 mdl:py-24 flex flex-col gap-20  '>
+            className='relative max-w-contentContainer px-4 mx-auto top-36 lgl:py-36 mdl:py-24 flex flex-col gap-20  '>
             <Section title="Selected Projects" />
             {projects.map((project, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-28 mt-10'>
