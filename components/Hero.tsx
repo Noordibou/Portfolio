@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function Hero() {
     const text = [
         " Full Stack Software Engineer with a foundation in Biochemistry.",
-        " problem-solving enthusiast who thrives on turning complex challenges into  into effective software solutions."
+        " problem-solving enthusiast who thrives on turning complex challenges into effective software solutions."
     ];
 
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -14,7 +14,7 @@ export default function Hero() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentTextIndex((prevIndex) => (prevIndex + 1) % text.length);
-        }, 5000);
+        }, 10000);
 
         return () => clearInterval(interval);
     }, [text.length]);

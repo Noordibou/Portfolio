@@ -31,7 +31,7 @@ export default function Header() {
                     <Link className='hover:text-textGreen' href='#projects' onClick={handleNavLinkClick}> Projects </Link>
                     <Link className='hover:text-textGreen' href='#contact' onClick={handleNavLinkClick}> Contact</Link>
                 </motion.div>
-                <Link href='/resume.docx' target='_blank' onClick={handleNavLinkClick}>
+                <Link href='/resume.pdf' target='_blank' onClick={handleNavLinkClick}>
                 <motion.button
                     initial={{ x: 500, opacity: 0, scale: 0.5 }}
                     animate={{ x: 0, opacity: 1, scale: 1 }}
@@ -47,7 +47,7 @@ export default function Header() {
                     <Link className='py-2 text-textDark hover:text-textGreen' href='#skills' onClick={handleNavLinkClick}> Skills </Link>
                     <Link className='py-2 text-textDark hover:text-textGreen' href='#projects' onClick={handleNavLinkClick}> Projects </Link>
                     <Link className='py-2 text-textDark hover:text-textGreen' href='#contact' onClick={handleNavLinkClick}> Contact</Link>
-                    <Link href='/resume.docx' target='_blank' onClick={handleNavLinkClick}>
+                    <Link href='/resume.pdf' target='_blank' onClick={handleNavLinkClick}>
                 <motion.button
                     initial={{ x: 500, opacity: 0, scale: 0.5 }}
                     animate={{ x: 0, opacity: 1, scale: 1 }}
