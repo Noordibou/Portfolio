@@ -39,7 +39,7 @@ export default function Hero() {
                 </div>
         
                 <div>
-                    <div className='relative mr-3  text-xl lgl:text-2xl text-textDark'>
+                    <div className='relative mr-3 md:pb-12 text-xl lgl:text-2xl text-textDark'>
                     {text.map((line, index) => (
                             <div
                                 key={index}
@@ -52,10 +52,10 @@ export default function Hero() {
                 </div>
                 </div>
                 <div className='w-full lgl:w-1/3 lgl:top-24 relative group mt-2 '>
-                    <div className='absolute w-80 h-96 -top-6 -left-6 rounded-lg'>
+                    <div className='absolute w-60 h-64 md:w-80 md:h-96 -top-6 -left-6 rounded-lg'>
                         <div className='w-full h-full relative z-20 flex pl-6  lgl:pl-0'>
                             <Image
-                                className='rounded-lg h-full object-cover'
+                                className='rounded-lg h-full object-fit'
                                 src='/nd1.jpg'
                                 alt='Noor Dibou'
                                 width={320}
@@ -64,7 +64,7 @@ export default function Hero() {
                         <div className='hidden absolute w-80 h-96 lgl:inline-block bg-textDark/40 rounded-md top-0 left-0 group-hover:bg-transparent duration-300' />
                         </div>
                     </div>
-                    <div className='lgl:inline-flex w-80 h-96 border-2 border-textGreen rounded-md lgl:group-hover:-translate-x-2 lgl:group-hover:-translate-y-2 transition-transform duration-300' />
+                    <div className='lgl:inline-flex w-60 h-64 md:w-80 md:h-96 border-2 border-textGreen rounded-md lgl:group-hover:-translate-x-2 lgl:group-hover:-translate-y-2 transition-transform duration-300' />
 
                 </div>
             </motion.div>
