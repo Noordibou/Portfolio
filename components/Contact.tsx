@@ -25,10 +25,10 @@ const ContactMe: React.FC<Props> = () => {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className='h-screen relative flex flex-col text-center items-center md:text-left md:flex-row max-w-7xl mx-auto px-5 md:px-10 justify-evenly mt-36 pt-8 pb-20'>
-
-            <h3 className='absolute top-[8%] md:top-[16%] xl:top-[20%] flex font-titleFont md:text-3xl text-sm font-semibold items-center uppercase tracking-[10px] md:tracking-[20px] text-textGreen '>Get In Touch</h3>
-
+            className='h-screen relative flex flex-col text-center items-center md:text-left md:flex-row max-w-7xl mx-auto px-5 md:px-10 justify-evenly mt-36 pt-8 pb-10'>
+           
+                <h3 className='absolute top-[8%] md:top-[16%] xl:top-[20%] flex font-titleFont md:text-3xl text-sm font-semibold items-center uppercase tracking-[10px] md:tracking-[20px] text-textGreen '>Get In Touch</h3>
+            
             <div className='flex flex-col space-y-7 ' >
                 <h4 className='text-md md:text-3xl pt-12 font-semibold text-center'>Whether you have an idea for a project or just want to chat,{' '}<span className='decoration-textGreen/50 underline'>feel free to shoot me an email!</span></h4>
                 <div className='flex items-center space-x-5 justify-center'>
@@ -48,7 +48,7 @@ const ContactMe: React.FC<Props> = () => {
                         </span>
                     </a>
                 </div>
-               
+
                 <form onSubmit={handleSubmit(onSubmit)} className='mx-auto w-full md:w-3/4 '>
                     <div className='flex flex-col space-y-2'>
                         <div className='flex flex-col md:flex-row gap-2'>
@@ -63,6 +63,7 @@ const ContactMe: React.FC<Props> = () => {
                     </div>
                 </form>
             </div>
+          
         </motion.div>
     )
 }
