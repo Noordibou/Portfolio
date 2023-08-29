@@ -23,13 +23,13 @@ export default function Home() {
 
         <Header />
 
-        <div className='w-full h-[88hv] xl:flex items-center justify-between  gap-20 '>
+        <div className='w-full h-[88hv] xl:flex items-center justify-between md:px-10 gap-20 '>
 
           <div className='hidden lg:inline-flex w-32 h-full fixed left-0 bottom-0 md-24 px-2'>
             <LeftSide />
           </div>
 
-          <div className='h-[88hv] mx-auto p-5 px-10 ' >
+          <div className='h-[88hv] mx-auto p-5 px-10  ' >
             <section id='hero'>
               <Hero />
             </section>

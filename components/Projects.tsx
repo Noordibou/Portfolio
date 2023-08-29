@@ -21,7 +21,7 @@ type Props = {
 const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, description, techStack }) => (
     <div className=' w-full flex flex-col items-center justify-center gap-8 '>
         <div className='flex flex-col xl:flex-row gap-2'>
-            <Link className='' href={href} target='_blank'>
+            <Link className='w-full xl:w-1/2 h-auto relative group' href={href} target='_blank'>
                 <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
                     <Image
                         className='w-screen h-[400px] object-fit rounded-md'

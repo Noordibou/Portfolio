@@ -94,15 +94,15 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
       }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, x: 0 }}
-      className='relative top-36 py-36 lgl:py-32 mdl:py-24 mb-10 flex flex-col gap-10'
+      className='relative top-36 py-36 lgl:py-32 mdl:py-24 mb-10 flex flex-col gap-10 px-10'
     >
       <Section title="My Toolbox" />
-      <div className='flex flex-col lgl:flex-row pl-2 py-10 '>
+      <div className='flex flex-col lgl:flex-row pl-2 py-10 md:w-10/12'>
         <div className='grid grid-cols-3 lgl:grid-cols-7 md:grid-cols-4 gap-4 items-center justify-center h-full text-md font-bodyFont group relative z-40'>
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className='hover:text-textLight text-xs md:text-lg px-2 cursor-pointer hover:-translate-y-2 transition-all duration-300'
+              className='hover:text-textLight text-xs md:text-lg md:px-6 lg:px-8 md:py-4 cursor-pointer hover:-translate-y-2 transition-all duration-300'
             >
               <Image width={40} height={40} src={skill.icon} alt={skill.title} />
               <p className='text-xs '>{skill.title}</p>
@@ -110,7 +110,7 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
           ))}
         </div>
       </div>
-      <div className='w-full absolute top-[28%] md:top-[25%] lgl:top-[35%]  bg-textGreen/30 rounded-md left-0 h-[500px] md:h-[500px] lgl:h-[400px] lgl:skew-x-0 z-0' />
+      <div className='w-full absolute top-[28%] md:top-[25%] lgl:top-[30%] md:w-10/12 bg-textGreen/30 rounded-md left-0 h-[500px] md:h-[500px] lgl:h-[400px] lgl:skew-x-0 z-0' />
     </motion.div>
   );
 };
