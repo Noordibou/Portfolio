@@ -75,9 +75,9 @@ const Projects: React.FC<Props> = () => {
             techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'Bootstrap'],
         },
         {
-            title: 'Sweet Treats',
-            href: '',
-            github: 'https://github.com/veecastro/pastry-recipes-app',
+            title: 'Pastry Palate',
+            href: 'https://long-breeze-6908.fly.dev/',
+            github: 'https://github.com/Noordibou/PastryPalate-2.0',
             imageUrl: '/st-main.png',
             description: 'A web app that uses Django, PostgreSQL and Python to build a robust platform for recipes, with key features like recipe browsing, search, and responsiveness enabled by the technical stack. The backend handles structured data and logic while the frontend focuses on user interfaces and experiences.',
             techStack: ['Django', 'PostgreSQL', 'Python', 'Bootstrap'],

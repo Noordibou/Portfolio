@@ -29,7 +29,7 @@ const ContactMe: React.FC<Props> = () => {
            
                 <h3 className='absolute top-[8%] md:top-[16%] xl:top-[20%] flex font-titleFont md:text-3xl text-sm font-semibold items-center uppercase tracking-[10px] md:tracking-[20px] text-textGreen '>Get In Touch</h3>
             
-            <div className='flex flex-col space-y-7 ' >
+            <div className='flex flex-col md:space-y-10 space-y-6' >
                 <h4 className='text-md md:text-3xl pt-12 font-semibold text-center'>Whether you have an idea for a project or just want to chat,{' '}<span className='decoration-textGreen/50 underline'>feel free to shoot me an email!</span></h4>
                 <div className='flex items-center space-x-5 justify-center'>
                     <a href='mailto:noordibou.nd@gmail.com' target='_blank'>
