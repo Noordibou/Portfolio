@@ -66,6 +66,14 @@ const Projects: React.FC<Props> = () => {
             techStack: ['React', 'NextJS','TypeScript', 'MongoDB','Stripe', 'TailwindCSS'],
         },
         {
+            title: 'The Dessert Palette',
+            href: 'https://long-breeze-6908.fly.dev/',
+            github: 'https://github.com/Noordibou/Dessert-Palette-2.0',
+            imageUrl: '/dp-main.png',
+            description: 'A web app that uses Django, PostgreSQL and Python to build a robust platform for recipes, with key features like categories, featured recipes, recipe browsing, search, and responsiveness enabled by the technical stack. The backend handles structured data and logic while the frontend focuses on user interfaces and experiences.',
+            techStack: ['Django', 'PostgreSQL', 'Python', 'Bootstrap'],
+        },
+        {
             title: 'Caffeine Chronicles',
             href: 'https://bamncoffeeshops-lw86.onrender.com/',
             github: 'https://github.com/MichaelDang33/BAMN-coffee-shops',
@@ -73,14 +81,6 @@ const Projects: React.FC<Props> = () => {
             description: 'Caffeine Chronicles is a coffee shop review app that allows users to share experiences about cafes through blog posts and profiles. Key features include user authentication, Google maps integration, blogging, and the ability to add, update, and delete shop details.',
 
             techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'Bootstrap'],
-        },
-        {
-            title: 'Pastry Palate',
-            href: 'https://long-breeze-6908.fly.dev/',
-            github: 'https://github.com/Noordibou/PastryPalate-2.0',
-            imageUrl: '/st-main.png',
-            description: 'A web app that uses Django, PostgreSQL and Python to build a robust platform for recipes, with key features like recipe browsing, search, and responsiveness enabled by the technical stack. The backend handles structured data and logic while the frontend focuses on user interfaces and experiences.',
-            techStack: ['Django', 'PostgreSQL', 'Python', 'Bootstrap'],
         },
         {
             title: 'Projects Planner',
