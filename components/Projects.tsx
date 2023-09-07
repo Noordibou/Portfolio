@@ -61,7 +61,7 @@ const Projects: React.FC<Props> = () => {
             title: 'Time Totes',
             href: 'https://e-shop-unty.vercel.app/',
             github: 'https://github.com/Noordibou/E-shop',
-            imageUrl: '/tt-m.png',
+            imageUrl: '/tt-main.png',
             description: 'Time Totes is an e-commerce app that allows users to browse and purchase watches, bags, and sunglasses with dedicated sections for both women and men. Key features include user authentication, shopping cart, and payment processing. The app is built with React, NextJS, and TailwindCSS on the frontend, and NodeJS, Express, and MongoDB on the backend.',
             techStack: ['React', 'NextJS','TypeScript', 'MongoDB','Stripe', 'TailwindCSS'],
         },
