@@ -24,7 +24,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, descri
             <Link className='w-full xl:w-1/2 h-auto relative group' href={href} target='_blank'>
                 <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
                     <Image
-                        className='w-screen h-[400px] object-fit rounded-md'
+                        className='w-screen max-w-xl h-[400px] object-fit rounded-md'
                         src={imageUrl}
                         alt={title}
                         width={600}
@@ -75,9 +75,9 @@ const Projects: React.FC<Props> = () => {
         },
         {
             title: 'Caffeine Chronicles',
-            href: 'https://bamncoffeeshops-lw86.onrender.com/',
-            github: 'https://github.com/MichaelDang33/BAMN-coffee-shops',
-            imageUrl: '/cc-m.png',
+            href: 'https://coffee-shop-blog.vercel.app/',
+            github: 'https://github.com/Noordibou/Coffee-Shop-Blog',
+            imageUrl: '/cc-main.png',
             description: 'Caffeine Chronicles is a coffee shop review app that allows users to share experiences about cafes through blog posts and profiles. Key features include user authentication, Google maps integration, blogging, and the ability to add, update, and delete shop details.',
 
             techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'Bootstrap'],
