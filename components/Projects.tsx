@@ -24,7 +24,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, descri
             <Link className='w-full xl:w-1/2 h-auto relative group' href={href} target='_blank'>
                 <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
                     <Image
-                        className='w-screen max-w-xl h-[400px] object-fit rounded-md'
+                        className=' max-w-xl w-[700px] h-[400px] object-fit rounded-md'
                         src={imageUrl}
                         alt={title}
                         width={600}
