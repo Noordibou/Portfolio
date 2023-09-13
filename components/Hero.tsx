@@ -61,7 +61,7 @@ export default function Hero() {
                                 width={320}
                                 height={320}
                             />
-                        <div className='hidden absolute w-80 h-96 lgl:inline-block bg-textDark/40 rounded-md top-0 left-0 group-hover:bg-transparent duration-300' />
+                        <div className='hidden absolute w-80 h-96 lgl:inline-block bg-textDark/20 rounded-md top-0 left-0 group-hover:bg-transparent duration-300' />
                         </div>
                     </div>
                     <div className='lgl:inline-flex w-60 h-64 md:w-80 md:h-96 border-2 border-textGreen rounded-md lgl:group-hover:-translate-x-2 lgl:group-hover:-translate-y-2 transition-transform duration-300' />
