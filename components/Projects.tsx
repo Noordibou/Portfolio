@@ -19,42 +19,41 @@ type Props = {
 };
 
 const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, description, techStack }) => (
-    <div className='w-full flex flex-col items-center justify-center gap-8 px-12'>
-    <div className='flex flex-col xl:flex-row gap-2 '>
-        <Link className='w-full xl:w-1/2 h-auto relative group ' href={href} target='_blank'>
-            <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
-                <div className='flex justify-center w-[450px] md:w-full md:pb-6'>
-                    <Image
-                        className='max-w-xl md:w-[600px]  h-[350px] object-fit rounded-md'
-                        src={imageUrl}
-                        alt={title}
-                        width={600}
-                        height={600}
-                    />
-                </div>
-            </motion.div>
-        </Link>
-        <div className='w-full xl:w-1/2  flex flex-col gap-6 lg:items-center xl:items-end items-end justify-between xl:-ml-16 z-10'>
-            <h3 className='text-2xl font-bold tracking-wide'>{title}</h3>
-            <p className='bg-[#4A4B4F] text-sm md:text-base xl:w-auto lg:w-3/4 p-2 md:p-6 rounded-md'>{description}</p>
-            <ul className='text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark pl-14'>
-                {techStack.map((tech, index) => (
-                    <li key={index}>{tech}</li>
-                ))}
-            </ul>
-            <div className='text-xl flex gap-4 '>
-                <a className='hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300'
-                    href={github} target='_blank'>
-                    <BsGithub size={20} />
-                </a>
-                <a className='hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300'
-                    href={href} target='_blank'>
-                    <FiExternalLink size={20} />
-                </a>
-            </div>
+    <div className='w-full flex flex-col items-center justify-center gap-8 top-24'>
+    <div className='flex flex-col xl:flex-row gap-2 w-full max-w-screen-xl'>
+      <Link className='md:w-full xl:w-1/2 relative group ' href={href} target='_blank'>
+        <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
+          <div className='flex justify-center w-[400px] md:w-full'>
+            <Image
+              className='max-w-full md:max-w-xl h-[350px] object-fit rounded-md'
+              src={imageUrl}
+              alt={title}
+              width={600}
+              height={600}
+            />
+          </div>
+        </motion.div>
+      </Link>
+      <div className='w-full xl:w-1/2 flex flex-col gap-6 lg:items-center xl:items-end items-end justify-between xl:-ml-16 z-10'>
+        <h3 className='text-2xl font-bold tracking-wide'>{title}</h3>
+        <p className='bg-[#4A4B4F] text-sm md:text-base xl:w-auto lg:w-3/4 p-2 md:p-6 rounded-md'>{description}</p>
+        <ul className='text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark pl-14'>
+          {techStack.map((tech, index) => (
+            <li key={index}>{tech}</li>
+          ))}
+        </ul>
+        <div className='text-xl flex gap-4 '>
+          <a className='hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300' href={github} target='_blank'>
+            <BsGithub size={20} />
+          </a>
+          <a className='hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300' href={href} target='_blank'>
+            <FiExternalLink size={20} />
+          </a>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+  
 
 );
 
@@ -103,7 +102,7 @@ const Projects: React.FC<Props> = () => {
             className='relative max-w-contentContainer px-4 mx-auto top-36 lgl:py-36 mdl:py-24 flex flex-col gap-20  '>
             <Section title="Selected Projects" />
             {projects.map((project, index) => (
-                <div key={index} className='w-full flex flex-col items-center justify-center gap-28 mt-10'>
+                <div key={index} className='w-full flex flex-col items-center justify-center gap-28 mt-10 px-4'>
                     <div className='flex flex-col xl:flex-row gap-4'>
                         <Project {...project} />
                     </div>
