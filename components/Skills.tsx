@@ -41,6 +41,7 @@ const skillsData: Skill[] = [
     icon: 'https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png',
     title: 'Next.js',
   },
+
   {
     icon: 'https://img.icons8.com/ios/50/FFFFFF/express-js.png',
     title: 'Express.js',
@@ -83,6 +84,19 @@ const skillsData: Skill[] = [
     icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/git.png',
     title: 'Git',
   },
+  {
+    icon: 'https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/FFFFFF/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-bold-tal-revivo.png',
+    title: 'Django',
+  },
+  {
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/jquery.png',
+    title: 'jQuery',
+  },
+  {
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/linux.png',
+    title: 'Linux',
+  }
+
 ];
 
 const Skills: React.FC<Props> = ({ directionLeft }) => {
