@@ -7,6 +7,7 @@ import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import LeftSide from '../components/LeftSide';
 import RightSide from '../components/RightSide';
+import Education from '../components/Education';
 
 
 export default function Home() {
@@ -37,6 +38,11 @@ export default function Home() {
             <section id='about'>
               < About />
             </section>
+
+            <section id='education'>
+              < Education />
+            </section>
+
 
             <section id='skills'>
               < Skills />
