@@ -9,9 +9,9 @@ export default function Education({}: Props) {
   return (
     <section className='relative max-w-contentContainer mx-auto top-24 py-10 lgl:py-32 mdl:py-24 flex flex-col gap-20'>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+         initial={{ y: -10, opacity: 0 }}
+         animate={{ y: 0, opacity: 1 }}
+         transition={{ duration: 0.6, delay: 0.8 }}
       >
         <Section title="Education" />
         <div className='flex flex-col lgl:flex-row gap-10 pt-8 px-4'>
