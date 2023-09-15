@@ -108,7 +108,7 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
       }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, x: 0 }}
-      className='relative top-36 py-36 lgl:py-32 mdl:py-24 mb-10 flex flex-col gap-10 px-10'
+      className='relative top-12 py-36 lgl:py-32 mdl:py-24 mb-10 flex flex-col gap-10 px-10'
     >
       <Section title="My Toolbox" />
       <div className='flex flex-col lgl:flex-row pl-2 py-10 md:w-10/12'>

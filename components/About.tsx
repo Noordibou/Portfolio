@@ -5,7 +5,7 @@ import Section from './Section';
 export default function About() {
   return (
     <section
-      className='relative max-w-contentContainer mx-auto top-36 py-10 lgl:py-32 mdl:py-24 flex flex-col gap-20 '>
+      className='relative max-w-contentContainer mx-auto top-36 md:top-60 py-20 lgl:py-32 mdl:py-24 flex flex-col gap-20 '>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -13,10 +13,9 @@ export default function About() {
         < Section title="About" />
         <div className='flex flex-col lgl:flex-row gap-10'>
           <div>
-            {/* <div className='w-full lgl:w-2/3 gap-3 px-0 md:px-4 text-base font-medium flex flex-col'> */}
-            <h4 className='text-xl md:text-2xl py-8 font-titleFont'>Here you will find {''}
+            <h4 className='text-xl md:text-2xl py-8 font-titleFont text-textDark'>Here you will find {''}
               <span className='underline decoration-textGreen/50'>more</span> {''} information about me </h4>
-            <p className='text-xs md:text-lg font-bodyFont text-textDark'>I started out studying biochemistry in college. I&apos;ve always loved learning how the natural world works on a molecular level. But I also realized I have a knack for programming and software engineering.
+            <p className='text-xs md:text-lg font-bodyFont'>I started out studying biochemistry in college. I&apos;ve always loved learning how the natural world works on a molecular level. But I also realized I have a knack for programming and software engineering.
               <br></br>
               <br></br>
 
