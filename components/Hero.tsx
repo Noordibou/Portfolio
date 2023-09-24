@@ -27,7 +27,7 @@ export default function Hero() {
         <motion.div className='flex flex-col lgl:flex-row gap-10 '
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
                 >
             <div className='w-full flex flex-col gap-4'>
                 <h1 className='relative text-textDark font-titleFont uppercase font-semibold tracking-[25px] flex flex-col text-5xl md:text-7xl lgl:text-7xl'>
