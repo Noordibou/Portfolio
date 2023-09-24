@@ -58,7 +58,7 @@ const ContactMe: React.FC<Props> = () => {
                         </div>
                         <input {...register('subject')} placeholder='Subject' className="contactInput" type='text' />
                         <textarea {...register('message')} placeholder='Message' className="contactInput" />
-                        <button type='submit' className='bg-textBright hover:bg-textBright/70 py-4 px-10 rounded-md text-black font-bold text-lg mx-auto w-full md:w-auto'>
+                        <button type='submit' className='bg-textLight/60 hover:bg-textLight/80 py-4 px-10 rounded-md text-black font-bold text-lg mx-auto w-full md:w-auto'>
                             Send
                         </button>
                     </div>
