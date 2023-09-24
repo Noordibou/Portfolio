@@ -16,7 +16,7 @@ export default function Home() {
       <div
         //snap-y  snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
         // className='w-full h-screen font-bodyFont bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll'>
-        className='snap-y snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#D63D21]/80 bg-bodyColor text-white w-full h-screen overflow-y-scroll overflow-x-hidden z-50'>
+        className='snap-y snap-mandatory scrollbar-thin font-titleFont scrollbar-track-gray-400/20 scrollbar-thumb-textDark/80 bg-bodyColor text-white w-full h-screen overflow-y-scroll overflow-x-hidden z-50'>
         <Head>
           <title>Noor Dibou</title>
           <link href="https://icons8.com/icon/TOm8IWyqS5Ne/n" />

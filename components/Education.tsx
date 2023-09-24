@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Education({}: Props) {
   return (
-    <section className='relative max-w-contentContainer mx-auto top-24 py-10 lgl:py-32 mdl:py-24 flex flex-col gap-20'>
+    <section className='relative max-w-contentContainer mx-auto top-24 py-10 lgl:py-32 mdl:py-24 flex flex-col mt-24'>
       <motion.div
          initial={{ y: -10, opacity: 0 }}
          animate={{ y: 0, opacity: 1 }}
@@ -38,8 +38,8 @@ export default function Education({}: Props) {
 
 
 const EducationItem = ({ title, institution }: { title: string, institution: string }) => (
-  <div className="py-4">
-    <h3 className="text-lg font-semibold">{title}</h3>
+  <div className="py-4 ">
+    <h3 className="text-lg font-semibold text-textLight">{title}</h3>
     <p className="text-gray-600">{institution}</p>
   </div>
 );

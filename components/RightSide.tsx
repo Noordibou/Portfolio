@@ -10,7 +10,7 @@ export default function RightSide() {
             className='h-full flex flex-col items-center justify-end cursor-pointer space-y-20  '>
 
             <a href='mailto:noordibou.nd@gmail.com' target='_blank'>
-                <p className='text-sm rotate-90 tracking-wide  hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300'>noordibou.nd@gmail.com</p>
+                <p className='text-sm rotate-90 tracking-wide text-textDark hover:text-textBright cursor-pointer hover:-translate-y-2 transition-all duration-300'>noordibou.nd@gmail.com</p>
             </a>
 
             <span className='w-[2px] h-24 inline-flex bg-textDark' />

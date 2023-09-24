@@ -23,7 +23,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, descri
     <div className='flex flex-col xl:flex-row gap-2 w-full max-w-screen-xl'>
       <Link className='md:w-full xl:w-1/2 relative group ' href={href} target='_blank'>
         <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
-          <div className='flex justify-center w-[400px] md:w-full'>
+          <div className='flex justify-center w-[400px] md:w-full '>
             <Image
               className='max-w-full md:max-w-xl md:h-[350px] h-[250px] px-8 md:px-0 object-fit rounded-md'
               src={imageUrl}
@@ -35,18 +35,18 @@ const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, descri
         </motion.div>
       </Link>
       <div className='w-full xl:w-1/2 flex flex-col gap-6 lg:items-center xl:items-end items-end justify-between  xl:-ml-16 z-10'>
-        <h3 className='text-2xl font-bold tracking-wide pr-4'>{title}</h3>
-        <p className='bg-[#4A4B4F] text-sm md:text-base xl:w-auto lg:w-3/4 p-2 md:p-6 rounded-md mx-4'>{description}</p>
-        <ul className='text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark pl-14 pr-4'>
+        <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
+        <p className='bg-textDark/40 text-sm md:text-base xl:w-auto lg:w-3/4 p-2 md:p-6 rounded-md mx-4'>{description}</p>
+        <ul className='text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textLight pl-14 pr-4'>
           {techStack.map((tech, index) => (
             <li key={index}>{tech}</li>
           ))}
         </ul>
         <div className='text-xl flex gap-4 pr-4'>
-          <a className='hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300' href={github} target='_blank'>
+          <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300' href={github} target='_blank'>
             <BsGithub size={20} />
           </a>
-          <a className='hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300' href={href} target='_blank'>
+          <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300' href={href} target='_blank'>
             <FiExternalLink size={20} />
           </a>
         </div>
@@ -99,7 +99,7 @@ const Projects: React.FC<Props> = () => {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className='relative max-w-contentContainer px-4 mx-auto top-36 lgl:py-36 mdl:py-24 flex flex-col gap-20  '>
+            className='relative max-w-contentContainer px-4 mx-auto top-36 lgl:py-36 mdl:py-24 flex flex-col gap-20 pb-24 '>
             <Section title="Selected Projects" />
             {projects.map((project, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center mt-10 px-4'>

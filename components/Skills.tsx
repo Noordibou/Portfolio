@@ -124,7 +124,7 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
           ))}
         </div>
       </div>
-      <div className='w-full absolute top-[26%] md:top-[22%] lgl:top-[30%] md:w-10/12 bg-textGreen/30 rounded-md left-0 h-[550px] md:h-[600px] lgl:h-[400px] lgl:skew-x-0 z-0' />
+      <div className='w-full absolute top-[26%] md:top-[22%] lgl:top-[30%] md:w-10/12 bg-textDark/40 rounded-md left-0 h-[550px] md:h-[600px] lgl:h-[400px] lgl:skew-x-0 z-0' />
     </motion.div>
   );
 };

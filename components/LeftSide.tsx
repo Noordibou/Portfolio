@@ -15,12 +15,12 @@ export default function LeftSide() {
             className=' h-full flex flex-col items-center justify-end cursor-pointer gap-2 '>
             <div className='flex flex-col gap-2 '>
                 <a href='https://github.com/Noordibou' target='_blank'>
-                    <span className='w-10 h-10 inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300'>
+                    <span className='w-10 h-10 inline-flex items-center justify-center text-textDark hover:text-textBright cursor-pointer hover:-translate-y-2 transition-all duration-300'>
                         <BsGithub size={24} />
                     </span>
                 </a>
                 <a href='https://www.linkedin.com/in/noordibou/' target='_blank'>
-                    <span className='w-10 h-10 inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300'>
+                    <span className='w-10 h-10 inline-flex items-center justify-center text-textDark hover:text-textBright cursor-pointer hover:-translate-y-2 transition-all duration-300'>
                         <FiLinkedin size={24} />
                     </span>
                 </a>
