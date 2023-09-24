@@ -40,7 +40,7 @@ export default function Hero() {
                 </div>
         
                 <div>
-                    <div className='relative mr-3 pb-8 text-xl lgl:text-2xl text-textLight w-3/4'>
+                    <div className='relative mr-3 pb-8 text-xl lgl:text-2xl text-textLight md:w-3/4'>
                     {text.map((line, index) => (
                             <div
                                 key={index}
@@ -50,8 +50,8 @@ export default function Hero() {
                     </div>
                     ))}
                     </div>
-                <div className='mr-3 md:pb-12 text-xl lgl:text-2xl text-textLight w-4/5 '>
-                    <Link href='#projects'>Take a closer look at some of the <span className=' bg-textLight/40  rounded-lg px-2 py-2 underline decoration-textBright/50'>projects</span> {''} I&apos;ve worked on.
+                <div className='mr-3 md:pb-12 text-xl lgl:text-2xl text-textLight md:w-4/5  '>
+                    <Link href='#projects'>Take a closer look at some of the <span className=' bg-textLight/40  rounded-lg px-2 pb-1 md:py-2 underline decoration-textBright/50'>projects</span> {''} I&apos;ve worked on.
                     </Link>
                 </div>
                 </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Section from './Section';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 type Skill = {
   icon: string;
@@ -11,6 +12,28 @@ type Skill = {
 type Props = {
   directionLeft?: boolean;
 };
+
+
+interface ScrollSectionProps {
+  children: React.ReactNode;
+}
+
+function ScrollSection({ children }: ScrollSectionProps) {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 1
+  });
+
+  return (
+    <div
+      ref={ref}
+      style={{ opacity: inView ? 1 : 0, transition: 'opacity 0.5s' }}
+    >
+      {children}
+    </div>
+  );
+}
+
 
 const skillsData: Skill[] = [
   {
@@ -101,17 +124,18 @@ const skillsData: Skill[] = [
 
 const Skills: React.FC<Props> = ({ directionLeft }) => {
   return (
-    <motion.div
-      // initial={{
+    <div
+    // initial={{
       //   x: directionLeft ? -200 : 200,
       //   opacity: 0,
       // }}
       // transition={{ duration: 1 }}
       // whileInView={{ opacity: 1, x: 0 }}
-      className='relative top-12 py-36 lgl:py-32 mdl:py-24 mb-10 flex flex-col gap-10 px-10'
-    >
+      className='relative top-12 py-24 lgl:py-32 mdl:py-24  flex flex-col px-10'
+      >
+        <ScrollSection>
       <Section title="My Toolbox" />
-      <div className='flex flex-col lgl:flex-row pl-2 py-10 md:w-10/12'>
+      <div className='flex flex-col lgl:flex-row pl-2 py-14 mt-8 md:w-10/12'>
         <div className='grid grid-cols-3 lgl:grid-cols-7 md:grid-cols-4 gap-4 items-center justify-center h-full text-md font-bodyFont group relative z-40'>
           {skillsData.map((skill, index) => (
             <div
@@ -124,8 +148,9 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
           ))}
         </div>
       </div>
-      <div className='w-full absolute top-[26%] md:top-[22%] lgl:top-[30%] md:w-10/12 bg-textDark/40 rounded-md left-0 h-[550px] md:h-[600px] lgl:h-[400px] lgl:skew-x-0 z-0' />
-    </motion.div>
+      <div className='w-full absolute top-[23%] md:top-[23%] lgl:top-[26%] md:w-10/12 bg-textDark/40 rounded-md left-0 h-[550px] md:h-[600px] lgl:h-[400px] lgl:skew-x-0 z-0' />
+      </ScrollSection>
+    </div>
   );
 };
 

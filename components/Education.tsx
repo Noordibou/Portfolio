@@ -38,6 +38,6 @@ export default function Education() {
 const EducationItem = ({ title, institution }: { title: string, institution: string }) => (
   <div className="py-4 ">
     <h3 className="text-lg font-semibold text-textLight">{title}</h3>
-    <p className="text-gray-600">{institution}</p>
+    <p className="text-textDark">{institution}</p>
   </div>
 );

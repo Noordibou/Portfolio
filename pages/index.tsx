@@ -65,11 +65,11 @@ export default function Home() {
               </section>
             </ScrollSection>
 
-            <ScrollSection>
+           
               <section id='skills'>
                 <Skills />
               </section>
-            </ScrollSection>
+           
 
            
               <section id='projects'>
