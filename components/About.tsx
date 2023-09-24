@@ -1,19 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Section from './Section';
+import { useInView } from 'react-intersection-observer';
 
-type Props = {
+interface ScrollSectionProps {
+  children: React.ReactNode;
+}
 
-};
+function ScrollSection({ children }: ScrollSectionProps) {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.8
+  });
+
+  return (
+    <div
+      ref={ref}
+      style={{ opacity: inView ? 1 : 0, transition: 'opacity 0.5s' }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function About() {
   return (
+    <ScrollSection>
     <section
       className='relative max-w-contentContainer mx-auto top-36 md:top-60 py-20 lgl:py-32 mdl:py-24 flex flex-col gap-20  '>
       <motion.div
       initial={{ y: -10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, delay: 0.8 }}>
+      transition={{ duration: 0.6, delay: 1 }}>
         < Section title="About" />
         <div className='flex flex-col lgl:flex-row gap-10 '>
           <div>
@@ -35,5 +53,6 @@ export default function About() {
         </div>
       </motion.div>
     </section>
+    </ScrollSection>
   )
 }

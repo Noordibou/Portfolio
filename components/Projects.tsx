@@ -121,7 +121,7 @@ const Projects: React.FC<Props> = () => {
         initial={{ y: -10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className='relative max-w-contentContainer px-4 mx-auto top-36 lgl:py-36 mdl:py-24 flex flex-col gap-20 pb-24 '>
+        className='relative max-w-contentContainer px-4 mx-auto top-24 lgl:py-36 mdl:py-24 flex flex-col gap-20 pb-24 '>
         <Section title="Selected Projects" />
         {projects.map((project, index) => (
           <div key={index} className='w-full flex flex-col items-center justify-center mt-10 px-4'>

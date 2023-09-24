@@ -17,7 +17,7 @@ interface ScrollSectionProps {
 function ScrollSection({ children }: ScrollSectionProps) {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 1
+    threshold: 0.8
   });
 
   return (
@@ -53,11 +53,9 @@ export default function Home() {
               </section>
             </ScrollSection>
 
-            <ScrollSection>
               <section id='about'>
                 <About />
               </section>
-            </ScrollSection>
 
             <ScrollSection>
               <section id='education'>
