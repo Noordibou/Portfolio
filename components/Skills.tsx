@@ -102,12 +102,12 @@ const skillsData: Skill[] = [
 const Skills: React.FC<Props> = ({ directionLeft }) => {
   return (
     <motion.div
-      initial={{
-        x: directionLeft ? -200 : 200,
-        opacity: 0,
-      }}
-      transition={{ duration: 1 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      // initial={{
+      //   x: directionLeft ? -200 : 200,
+      //   opacity: 0,
+      // }}
+      // transition={{ duration: 1 }}
+      // whileInView={{ opacity: 1, x: 0 }}
       className='relative top-12 py-36 lgl:py-32 mdl:py-24 mb-10 flex flex-col gap-10 px-10'
     >
       <Section title="My Toolbox" />

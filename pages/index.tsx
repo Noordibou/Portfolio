@@ -8,15 +8,32 @@ import Contact from '../components/Contact';
 import LeftSide from '../components/LeftSide';
 import RightSide from '../components/RightSide';
 import Education from '../components/Education';
+import { useInView } from 'react-intersection-observer';
 
+interface ScrollSectionProps {
+  children: React.ReactNode;
+}
+
+function ScrollSection({ children }: ScrollSectionProps) {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 1
+  });
+
+  return (
+    <div
+      ref={ref}
+      style={{ opacity: inView ? 1 : 0, transition: 'opacity 0.5s' }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Home() {
   return (
     <>
-      <div
-        //snap-y  snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
-        // className='w-full h-screen font-bodyFont bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll'>
-        className='snap-y snap-mandatory scrollbar-thin font-titleFont scrollbar-track-gray-400/20 scrollbar-thumb-textDark/80 bg-bodyColor text-white w-full h-screen overflow-y-scroll overflow-x-hidden z-50'>
+      <div className='snap-y snap-mandatory scrollbar-thin font-titleFont scrollbar-track-gray-400/20 scrollbar-thumb-textDark/80 bg-bodyColor text-white w-full h-screen overflow-y-scroll overflow-x-hidden z-50'>
         <Head>
           <title>Noor Dibou</title>
           <link href="https://icons8.com/icon/TOm8IWyqS5Ne/n" />
@@ -25,36 +42,46 @@ export default function Home() {
         <Header />
 
         <div className='w-full h-[88hv] xl:flex items-center justify-between md:px-10 gap-20 '>
-
           <div className='hidden lg:inline-flex w-32 h-full fixed left-0 bottom-0 md-24 px-2'>
             <LeftSide />
           </div>
 
-          <div className='h-[88hv] mx-auto p-5 px-10  ' >
-            <section id='hero'>
-              <Hero />
-            </section>
+          <div className='h-[88hv] mx-auto p-5 px-10'>
+            <ScrollSection>
+              <section id='hero'>
+                <Hero />
+              </section>
+            </ScrollSection>
 
-            <section id='about'>
-              < About />
-            </section>
+            <ScrollSection>
+              <section id='about'>
+                <About />
+              </section>
+            </ScrollSection>
 
-            <section id='education'>
-              < Education />
-            </section>
+            <ScrollSection>
+              <section id='education'>
+                <Education />
+              </section>
+            </ScrollSection>
 
+            <ScrollSection>
+              <section id='skills'>
+                <Skills />
+              </section>
+            </ScrollSection>
 
-            <section id='skills'>
-              < Skills />
-            </section>
+           
+              <section id='projects'>
+                <Projects />
+              </section>
+           
 
-            <section id='projects'>
-              < Projects />
-            </section>
-            <section id='contact'>
-              < Contact />
-            </section>
-
+            <ScrollSection>
+              <section id='contact'>
+                <Contact />
+              </section>
+            </ScrollSection>
           </div>
 
           <div className='hidden lg:inline-flex w-32 h-full fixed pd-3 right-0 bottom-0'>
@@ -63,5 +90,5 @@ export default function Home() {
         </div>
       </div>
     </>
-  )
+  );
 }

@@ -3,20 +3,18 @@ import { motion } from 'framer-motion';
 import Section from './Section';
 
 
-type Props = {};
+type Props = {
+  
+};
 
-export default function Education({}: Props) {
+export default function Education() {
   return (
     <section className='relative max-w-contentContainer mx-auto top-24 py-10 lgl:py-32 mdl:py-24 flex flex-col mt-24'>
-      <motion.div
-         initial={{ y: -10, opacity: 0 }}
-         animate={{ y: 0, opacity: 1 }}
-         transition={{ duration: 0.6, delay: 0.8 }}
-      >
+      <div>
         <Section title="Education" />
         <div className='flex flex-col lgl:flex-row gap-10 pt-8 px-4'>
           <div>
-            
+
             <EducationItem
               title="Bachelor's Degree in Biochemistry"
               institution="The University of Texas at Dallas"
@@ -31,7 +29,7 @@ export default function Education({}: Props) {
             />
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

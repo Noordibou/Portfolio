@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 
 export default function Hero() {
@@ -22,8 +23,8 @@ export default function Hero() {
 
     return (
         <section
-        className='relative max-w-contentContainer top-24 md:top-52 mx-auto py-10 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4  z-0'>
-        <motion.div className='flex flex-col lgl:flex-row  gap-10'
+        className='relative max-w-contentContainer top-24 md:top-52 mx-auto py-10 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4 z-0'>
+        <motion.div className='flex flex-col lgl:flex-row gap-10 '
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -39,16 +40,20 @@ export default function Hero() {
                 </div>
         
                 <div>
-                    <div className='relative mr-3 md:pb-12 text-xl lgl:text-2xl text-textLight'>
+                    <div className='relative mr-3 pb-8 text-xl lgl:text-2xl text-textLight w-3/4'>
                     {text.map((line, index) => (
                             <div
                                 key={index}
                                 className={`animated-text ${index === currentTextIndex ? 'visible' : 'hidden'}`}
                             >
-                               Hello, my name is Noor Dibou, I'm a <span className='text-textDark'> {line} </span>
+                               Hello, my name is Noor Dibou, I&apos;m a <span className='text-textDark'> {line} </span>
                     </div>
                     ))}
                     </div>
+                <div className='mr-3 md:pb-12 text-xl lgl:text-2xl text-textLight w-4/5 '>
+                    <Link href='#projects'>Take a closer look at some of the <span className=' bg-textLight/40  rounded-lg px-2 py-2 underline decoration-textBright/50'>projects</span> {''} I&apos;ve worked on.
+                    </Link>
+                </div>
                 </div>
                 </div>
                 {/* <div className='w-full lgl:w-1/3 lgl:top-24 relative group mt-2 '>
