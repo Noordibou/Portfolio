@@ -81,6 +81,15 @@ const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, descri
 const Projects: React.FC<Props> = () => {
   const projects = [
     {
+      title: 'Caffeine Chronicles',
+      href: 'https://coffee-shop-blog.vercel.app/',
+      github: 'https://github.com/Noordibou/Coffee-Shop-Blog',
+      imageUrl: '/cc-main.png',
+      description: 'Caffeine Chronicles is a coffee shop review app that allows users to share experiences about cafes through blog posts and profiles. Key features include user authentication, Google maps integration, blogging, and the ability to add, update, and delete shop details.',
+
+      techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'Bootstrap'],
+    },
+    {
       title: 'Time Totes',
       href: 'https://e-shop-unty.vercel.app/',
       github: 'https://github.com/Noordibou/E-shop',
@@ -95,15 +104,6 @@ const Projects: React.FC<Props> = () => {
       imageUrl: '/dp-main.png',
       description: 'A web app that uses Django, PostgreSQL and Python to build a robust platform for recipes, with key features like categories, featured recipes, recipe browsing, search, and responsiveness enabled by the technical stack. The backend handles structured data and logic while the frontend focuses on user interfaces and experiences.',
       techStack: ['Django', 'PostgreSQL', 'Python', 'Bootstrap'],
-    },
-    {
-      title: 'Caffeine Chronicles',
-      href: 'https://coffee-shop-blog.vercel.app/',
-      github: 'https://github.com/Noordibou/Coffee-Shop-Blog',
-      imageUrl: '/cc-main.png',
-      description: 'Caffeine Chronicles is a coffee shop review app that allows users to share experiences about cafes through blog posts and profiles. Key features include user authentication, Google maps integration, blogging, and the ability to add, update, and delete shop details.',
-
-      techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'Bootstrap'],
     },
     {
       title: 'Projects Planner',
