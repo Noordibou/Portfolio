@@ -87,7 +87,7 @@ const Projects: React.FC<Props> = () => {
       imageUrl: '/cc-main.png',
       description: 'Caffeine Chronicles is a coffee shop review app that allows users to share experiences about cafes through blog posts and profiles. Key features include user authentication, Google maps integration, blogging, and the ability to add, update, and delete shop details.',
 
-      techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'Bootstrap'],
+      techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'TailwindCSS'],
     },
     {
       title: 'Time Totes',
