@@ -75,7 +75,7 @@ export default function Navbar() {
                         <Link className='py-2 text-textDark hover:text-textBright' href='#skills'>Skills</Link>
                         <Link className='py-2 text-textDark hover:text-textBright' href='#projects'>Projects</Link>
                         <Link className='py-2 text-textDark hover:text-textBright' href='#contact'>Contact</Link>
-                        <Link className='py-2 px-4 font-titleFont rounded-md border border-textBright hover:bg-textBright/30 flex items-center justify-between uppercase text-textDark cursor-pointer' href='/resume1.pdf' target='_blank' >Resume</Link>
+                        <Link className='py-2 px-4 font-titleFont rounded-md border border-textBright hover:bg-textBright/30 flex items-center justify-between uppercase text-textDark cursor-pointer' href='/resume2.pdf' target='_blank' >Resume</Link>
                     </ul>
                 </div>
                 <motion.ul
@@ -88,7 +88,7 @@ export default function Navbar() {
                     <Link href='#skills' className='py-2 text-textDark hover:text-textBright' >Skills</Link>
                     <Link href='#projects' className='py-2 text-textDark hover:text-textBright' >Projects</Link>
                     <Link href='#contact' className='py-2 text-textDark hover:text-textBright' >Contact</Link>
-                    <Link href='/resume1.pdf' target='_blank' >
+                    <Link href='/resume2.pdf' target='_blank' >
                         <motion.button
                             initial={{ x: 500, opacity: 0, scale: 0.5 }}
                             animate={{ x: 0, opacity: 1, scale: 1 }}
