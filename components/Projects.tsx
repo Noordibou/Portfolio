@@ -107,10 +107,10 @@ const Projects: React.FC<Props> = () => {
     },
     {
       title: 'Projects Planner',
-      href: 'https://autumn-glade-2959.fly.dev/',
+      href: 'https://managerapp.fly.dev/',
       github: 'https://github.com/Noordibou/CRUD-PROJECT',
-      imageUrl: 'https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero_ToDo_960x615_2x_1_RE3HTxG?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1920&qlt=100&fmt=png-alpha&fit=constrain',
-      description: 'The Projects Planner app is a straightforward software application designed to create and manage checklists for various purposes. It offers a user-friendly interface that allows individuals to create multiple project checklists, and mark items as completed or to edit them.This app allows users to create multiple checklists based on their needs. Each checklist represents a set of tasks or items to be completed. Users can add or delete items to their checklists. Users can add due date and expected time needed to finish the project.',
+      imageUrl: '/pp-main1.png',
+      description: 'The Projects Planner app is a user-friendly software designed for creating and managing checklists for various purposes. It allows users to create multiple checklists, add or remove items, and set due dates and timeframes for completing tasks.',
       techStack: ['Express', 'NodeJS', 'Mongoose', 'EJS', 'Bootstrap'],
     },
   ];
