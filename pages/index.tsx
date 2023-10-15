@@ -58,12 +58,6 @@ export default function Home() {
                 <About />
               </section>
 
-            <ScrollSection>
-              <section id='education'>
-                <Education />
-              </section>
-            </ScrollSection>
-
            
               <section id='skills'>
                 <Skills />
@@ -79,7 +73,11 @@ export default function Home() {
                 <CWProjects />
               </section>
 
-           
+           <ScrollSection>
+              <section id='education'>
+                <Education />
+              </section>
+            </ScrollSection>
 
             <ScrollSection>
               <section id='contact'>
