@@ -9,7 +9,7 @@ type Props = {
 
 export default function Education() {
   return (
-    <section className='relative max-w-contentContainer mx-auto top-24 py-10 lgl:py-32 mdl:py-24 flex flex-col mt-24'>
+    <section className='relative max-w-contentContainer mx-auto top-24 py-10 lgl:py-32 mdl:py-24 flex flex-col mt-16'>
       <div>
         <Section title="Education" />
         <div className='flex flex-col lgl:flex-row gap-10 pt-8 px-4'>
