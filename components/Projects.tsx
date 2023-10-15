@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
+import { MdExpandMore} from 'react-icons/md';
 import { useInView } from 'react-intersection-observer';
 
 interface ProjectProps {
@@ -46,7 +47,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, descri
         <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
           <div className='flex justify-center w-[400px] md:w-full '>
             <Image
-              className='max-w-full md:max-w-xl md:h-[350px] h-[250px] px-8 md:px-0 object-fit rounded-md'
+              className='max-w-full md:max-w-xl md:h-[350px] h-[250px] px-8 md:px-0 object-fit rounded-md border-textDark border-t-2 border-l-2 border-r-4 border-b-4'
               src={imageUrl}
               alt={title}
               width={600}
@@ -84,7 +85,7 @@ const Projects: React.FC<Props> = () => {
       title: 'Caffeine Chronicles',
       href: 'https://coffee-shop-blog.vercel.app/',
       github: 'https://github.com/Noordibou/Coffee-Shop-Blog',
-      imageUrl: '/cc-main.png',
+      imageUrl: '/cc1-main.png',
       description: 'Caffeine Chronicles is a coffee shop review app that allows users to share experiences about cafes through blog posts and profiles. Key features include user authentication, Google maps integration, blogging, and the ability to add, update, and delete shop details.',
 
       techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'TailwindCSS'],
@@ -115,6 +116,11 @@ const Projects: React.FC<Props> = () => {
     },
   ];
 
+  const [visibleProjects, setVisibleProjects] = useState(2); // Number of initially visible projects
+  const showMoreProjects = () => {
+    setVisibleProjects(visibleProjects + 2); // Show 2 more projects when clicked
+  };
+
   return (
     <ScrollSection>
       <motion.div
@@ -123,18 +129,28 @@ const Projects: React.FC<Props> = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
         className='relative max-w-contentContainer px-4 mx-auto top-24 lgl:py-36 mdl:py-24 flex flex-col gap-20 pb-24 '>
         <Section title="Selected Projects" />
-        {projects.map((project, index) => (
+        {projects.slice(0, visibleProjects).map((project, index) => (
           <div key={index} className='w-full flex flex-col items-center justify-center mt-10 px-4'>
             <div className='flex flex-col xl:flex-row gap-4 px-4'>
               <Project {...project} />
             </div>
           </div>
         ))}
+        {visibleProjects < projects.length && (
+          <div className='w-full flex justify-center'>
+            <button
+              onClick={showMoreProjects}
+              className='flex flex-col items-center justify-center  hover:text-textLight/60 text-textLight px-4  rounded-md'
+              >
+              <p className='text-sm -my-3'>Show More</p>
+              <MdExpandMore size={54}/>
+            </button>
+          </div>
+        )}
       </motion.div>
     </ScrollSection>
   );
 }
 
 export default Projects;
-
 

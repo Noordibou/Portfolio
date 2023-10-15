@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
+import CWProjects from '../components/CWProjects';
 import Contact from '../components/Contact';
 import LeftSide from '../components/LeftSide';
 import RightSide from '../components/RightSide';
@@ -73,6 +74,11 @@ export default function Home() {
               <section id='projects'>
                 <Projects />
               </section>
+
+              <section id='cwprojects'>
+                <CWProjects />
+              </section>
+
            
 
             <ScrollSection>
