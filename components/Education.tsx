@@ -9,7 +9,7 @@ type Props = {
 
 export default function Education() {
   return (
-    <section className='relative max-w-contentContainer mx-auto top-24 flex flex-col'>
+    <section className='relative max-w-contentContainer mx-auto top-36 pb-24 flex flex-col'>
       <div>
         <Section title="Education" />
         <div className='flex flex-col lgl:flex-row gap-10 pt-8 px-4'>

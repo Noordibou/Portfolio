@@ -131,11 +131,11 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
       // }}
       // transition={{ duration: 1 }}
       // whileInView={{ opacity: 1, x: 0 }}
-      className='relative top-24 py-24 lgl:py-32 mdl:py-24  flex flex-col px-10'
+      className='relative top-36 md:mt-28 mt-24  lgl:pt-32 mdl:pt-24  mb-24 flex flex-col '
       >
         <ScrollSection>
       <Section title="My Toolbox" />
-      <div className='flex flex-col lgl:flex-row pl-2 py-14 mt-8 md:w-10/12'>
+      <div className='flex flex-col lgl:flex-row pl-2 pt-14 mt-8 md:w-10/12'>
         <div className='grid grid-cols-3 lgl:grid-cols-7 md:grid-cols-4 gap-4 items-center justify-center h-full text-md font-bodyFont group relative z-40'>
           {skillsData.map((skill, index) => (
             <div
@@ -148,7 +148,7 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
           ))}
         </div>
       </div>
-      <div className='w-full absolute top-[23%] md:top-[23%] lgl:top-[26%] md:w-10/12 bg-textDark/40 rounded-md left-0 h-[550px] md:h-[600px] lgl:h-[400px] lgl:skew-x-0 z-0' />
+      <div className='w-full absolute top-[17%] md:top-[25%] lgl:top-[36%] md:w-10/12 bg-textDark/40 rounded-md left-0 h-[550px] md:h-[600px] lgl:h-[400px] lgl:skew-x-0 z-0' />
       </ScrollSection>
     </div>
   );

@@ -41,7 +41,7 @@ function ScrollSection({ children }: ScrollSectionProps) {
 }
 
 const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, description, techStack }) => (
-  <div className='w-full flex flex-col items-center justify-center gap-8 top-24  px-8'>
+  <div className='w-full flex flex-col items-center justify-center gap-8 top-24  '>
     <div className='flex flex-col xl:flex-row gap-2 w-full max-w-screen-xl'>
       <Link className='md:w-full xl:w-1/2 relative group ' href={href} target='_blank'>
         <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
@@ -127,10 +127,10 @@ const Projects: React.FC<Props> = () => {
         initial={{ y: -10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className='relative max-w-contentContainer px-4 mx-auto top-24 lgl:py-36 mdl:py-24 flex flex-col gap-20 pb-24 '>
+        className='relative max-w-contentContainer  mx-auto top-36  lgl:py-36 mdl:py-24 flex flex-col gap-20 pb-24 mt-36 '>
         <Section title="Selected Projects" />
         {projects.slice(0, visibleProjects).map((project, index) => (
-          <div key={index} className='w-full flex flex-col items-center justify-center mt-10 px-4'>
+          <div key={index} className='w-full flex flex-col items-center justify-center mt-4 px-4'>
             <div className='flex flex-col xl:flex-row gap-4 px-4'>
               <Project {...project} />
             </div>

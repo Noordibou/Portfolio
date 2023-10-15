@@ -45,7 +45,7 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
   const formattedDescription = { __html: description };
 
   return (
-    <div className='w-full items-center justify-center gap-8 top-24 px-8'>
+    <div className='w-full items-center justify-center gap-8 top-20 '>
       <div className='flex flex-col gap-2 md:w-full w-96 '>
         <div>
             <div className='flex justify-center '>
@@ -122,10 +122,10 @@ const CWProjects: React.FC<Props> = () => {
         initial={{ y: -10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className='relative max-w-contentContainer px-4 mx-auto top-24  flex flex-col gap-20 py-24 '>
+        className='relative max-w-contentContainer  mx-auto top-24  flex flex-col gap-20 py-24 '>
         <Section title="On the Horizon" />
         {projects.slice(0, visibleProjects).map((project, index) => (
-          <div key={index} className='w-full flex flex-col items-center justify-center mt-10 px-4'>
+          <div key={index} className='w-full flex flex-col items-center justify-center mt-4 px-4'>
             <div className='flex flex-col xl:flex-row gap-4 px-4'>
               <CWProject {...project} />
             </div>
