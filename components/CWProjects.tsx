@@ -61,16 +61,25 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
               ))}
             </div>
         </div>
-        <div className='flex flex-col gap-6  items-end justify-between z-10'>
+        <div className='flex flex-col gap-6 md:justify-center md:items-center items-end justify-between z-10'>
           <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
           <p className='bg-textDark/40 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
-          <ul className='text-xs md:text-sm font-titleFont tracking-wide  flex flex-wrap gap-2 md:gap-5  justify-end text-textLight pl-14 pr-4'>
+            <div className='flex justify-center '>
+                  <Image
+                    className='md:h-[300px] h-[275px] md:w-[500px] w-80 object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
+                    src={certificate}
+                    alt={title}
+                    width={600}
+                    height={600}
+                  />
+              </div>
+          <ul className='text-xs md:text-sm font-titleFont tracking-wide  flex flex-wrap gap-2 md:gap-5 md:justify-center  justify-end text-textLight pl-14 pr-4'>
             {techStack.map((tech, index) => (
               <li key={index}>{tech}</li>
             ))}
           </ul>
           <div className='text-xl flex gap-4 pr-4'>
-            <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300' href={github} target='_blank'>
+            <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300 ' href={github} target='_blank'>
               <BsGithub size={20} />
             </a>
             {/* <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300' href={href} target='_blank'>
@@ -78,15 +87,6 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
             </a> */}
           </div>
         </div>
-          <div className='flex justify-center '>
-                <Image
-                  className='md:h-[300px] h-[275px] md:w-[500px] w-80 object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
-                  src={certificate}
-                  alt={title}
-                  width={600}
-                  height={600}
-                />
-            </div>
       </div>
     </div>
   );
