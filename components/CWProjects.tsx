@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
-import Link from 'next/link';
 import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
-import { FiExternalLink } from 'react-icons/fi';
 import { MdExpandMore } from 'react-icons/md';
 import { useInView } from 'react-intersection-observer';
 
@@ -48,13 +46,13 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
 
   return (
     <div className='w-full items-center justify-center gap-8 top-24 px-8'>
-      <div className='flex flex-col gap-2 w-full max-w-screen-xl'>
-        <div className='md:w-full relative group '>
-            <div className='flex justify-center w-[300px] md:w-full ml-8 md:ml-0'>
+      <div className='flex flex-col gap-2 md:w-full w-96 '>
+        <div>
+            <div className='flex justify-center '>
               {imageUrls.map((imageUrl, index) => (
                 <Image
                   key={index}
-                  className='lg:h-[500px] md:h-[400px] h-[300px] m-2  object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
+                  className=' md:h-[400px] h-[275px] md:w-[300px] w-40 m-2  object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
                   src={imageUrl}
                   alt={title}
                   width={600}
@@ -63,10 +61,10 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
               ))}
             </div>
         </div>
-        <div className='w-full  flex flex-col gap-6 lg:items-center xl:items-end items-end justify-between z-10'>
+        <div className='flex flex-col gap-6  items-end justify-between z-10'>
           <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
           <p className='bg-textDark/40 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
-          <ul className='text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textLight pl-14 pr-4'>
+          <ul className='text-xs md:text-sm font-titleFont tracking-wide md:w-full w-96 flex flex-wrap gap-2 md:gap-5  justify-end text-textLight pl-14 pr-4'>
             {techStack.map((tech, index) => (
               <li key={index}>{tech}</li>
             ))}
@@ -80,9 +78,9 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
             </a> */}
           </div>
         </div>
-          <div className='flex justify-center w-[400px] md:w-full ml-8 md:ml-0'>
+          <div className='flex justify-center '>
                 <Image
-                  className='max-w-full lg:h-[350px] md:h-[400px] h-[300px]  object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
+                  className='md:h-[300px] h-[275px] md:w-[500px] w-80 object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
                   src={certificate}
                   alt={title}
                   width={600}
