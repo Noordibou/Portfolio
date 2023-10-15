@@ -98,7 +98,7 @@ const CWProjects: React.FC<Props> = () => {
       title: 'Feeling Friends',
       href: '',
       github: 'https://github.com/Noordibou/Mindful-Journal',
-      imageUrls: ['/ffs.png', '/fft.png'],
+      imageUrls: ['/ffs1.png', '/fft.png'],
       description: `Feeling Friends is a user-friendly app designed with neurodiverse students in mind. It addresses a range of challenges they may face, including behavioral issues, emotional regulation, social interactions, and executive functioning. The app offers a dual perspective: one for students and one for teachers.<br><br>
 
       In the student view, at the beginning and end of each school day, students engage with a series of animated pages. They express their current emotions, outline their goals and needs for the day, and communicate with their teacher about how they're feeling. The app then provides tips and guidance to help them navigate these emotions effectively.<br><br>
