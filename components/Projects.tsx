@@ -47,7 +47,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, descri
         <motion.div whileHover={{ scale: 0.95 }} transition={{ duration: 0.3 }}>
           <div className='flex justify-center w-[400px] md:w-full '>
             <Image
-              className='max-w-full md:max-w-xl md:h-[350px] h-[250px] px-8 md:px-0 object-fit rounded-md border-textDark border-t-2 border-l-2 border-r-4 border-b-4'
+              className='max-w-full md:max-w-xl md:h-[350px] h-[250px] mx-8 md:px-0 object-fit rounded-md border-textDark border-t-2 border-l-2 border-r-4 border-b-4'
               src={imageUrl}
               alt={title}
               width={600}
