@@ -27,7 +27,7 @@ export default function About() {
   return (
     <ScrollSection>
     <section
-      className='relative max-w-contentContainer mx-auto top-42 md:top-60 py-8 lgl:py-32 mdl:py-24 flex flex-col gap-20  '>
+      className='relative max-w-contentContainer mx-auto top-44 md:top-60 py-8 lgl:py-32 mdl:py-24 flex flex-col gap-20  '>
       <motion.div
       initial={{ y: -10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
