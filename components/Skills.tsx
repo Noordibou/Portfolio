@@ -131,7 +131,7 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
       // }}
       // transition={{ duration: 1 }}
       // whileInView={{ opacity: 1, x: 0 }}
-      className='relative top-12 py-24 lgl:py-32 mdl:py-24  flex flex-col px-10'
+      className='relative top-24 py-24 lgl:py-32 mdl:py-24  flex flex-col px-10'
       >
         <ScrollSection>
       <Section title="My Toolbox" />
