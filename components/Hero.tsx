@@ -50,9 +50,11 @@ export default function Hero() {
                     </div>
                     ))}
                     </div>
-                <div className='mr-3 md:pb-12 text-xl lgl:text-2xl text-textLight md:w-4/5  '>
-                    <Link href='#projects'>Take a closer look at some of the <span className=' bg-textLight/40  rounded-lg px-2 pb-1 md:py-2 underline decoration-textBright/50'>projects</span> {''} I&apos;ve worked on.
-                    </Link>
+                    <div className='z-30'>
+                <div className='mr-3 md:pb-12 text-xl lgl:text-2xl text-textLight md:w-4/5'>
+                    <p>Take a closer look at some of the <Link href='#projects' className=' bg-textLight/40  rounded-lg px-2 pb-1 md:py-2 underline decoration-textBright/50 z-40'>projects</Link> {''} I&apos;ve worked on.
+                    </p>
+                    </div>
                 </div>
                 </div>
                 </div>

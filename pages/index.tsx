@@ -49,7 +49,7 @@ export default function Home() {
 
           <div className='h-[88hv] mx-auto p-5 px-10'>
             <ScrollSection>
-              <section id='hero'>
+              <section id='hero' className='z-30'>
                 <Hero />
               </section>
             </ScrollSection>
@@ -57,7 +57,6 @@ export default function Home() {
               <section id='about'>
                 <About />
               </section>
-
            
               <section id='skills'>
                 <Skills />
