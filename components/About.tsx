@@ -25,7 +25,7 @@ function ScrollSection({ children }: ScrollSectionProps) {
 
 export default function About() {
   return (
-    <div className='relative max-w-contentContainer mx-auto  md:top-60 py-8 lgl:py-32 mdl:py-24 flex flex-col gap-20'>
+    <div className='relative max-w-contentContainer mx-auto top-44 md:top-60 py-8 lgl:py-32 mdl:py-24 flex flex-col gap-20'>
     <ScrollSection>
       <motion.div
       initial={{ y: -10, opacity: 0 }}
