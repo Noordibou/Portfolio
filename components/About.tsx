@@ -36,17 +36,17 @@ export default function About() {
           <div>
             <h4 className='text-xl md:text-2xl py-8 font-titleFont text-textLight'>Here you will learn {''}
               <span className='underline decoration-textBright/50'>more</span> {''} about me </h4>
-            <p className='text-xs md:text-lg font-titleFont text-[#1d1f0c] font-semibold'>I started out studying biochemistry in college. I&apos;ve always loved learning how the natural world works on a molecular level. But I also realized I have a knack for programming and software engineering.
+            <p className='text-xs md:text-lg font-titleFont text-[#1d1f0c] font-semibold'>I started my career studying biochemistry in college. I&apos;ve always been fascinated by the molecular foundations of life and nature. But over time, I realized I also have a passion for programming. So I made the switch to software engineering, while still holding onto my love of science.
               <br></br>
               <br></br>
 
-              Over the years, my passion for environmental sustainability has grown. I think my science background gave me an appreciation for the intricate balance of our ecosystems. I care deeply about issues like climate change, pollution, and habitat destruction. I also love animals and think we need to treat them more humanely.
+              My background in biochemistry gave me an appreciation for the complex balance of systems in our natural world. I care deeply about issues like climate change, pollution, conservation, and animal welfare. As a software engineer now, I&apos;m motivated to use my skills to make a positive difference on these causes.
               <br></br>
               <br></br>
-              As a software engineer now, I&apos;m motivated to use my skills to make a positive difference. There are so many ways technology can help promote sustainability, environmental education, conservation, and animal welfare. My goal is to develop innovative solutions that speak to my values. I get really excited when I can create apps, tools and platforms that empower people and organizations to create change.
+              There are so many ways technology can empower people and organizations to create change. I get really excited when I can build apps, platforms and tools that promote sustainability, environmental education, animal rights, or improve people&apos; life in general. My goal is to collaborate with others to develop innovative solutions that speak to my values.
               <br></br>
               <br></br>
-              I believe technology and environmentalism go hand in hand. There&apos;s so much potential when people from different backgrounds come together. I&apos;m always eager to collaborate and brainstorm new ideas. So let me know what projects we could work on together to make this world a little greener?
+              I believe technology and environmentalism go hand in hand. By bringing together people from different backgrounds, we can harness the power of software for good. I'm always eager to brainstorm new ideas, let me know if you have any projects in mind where we could apply technology to benefit the planet and its inhabitants..
             </p>
           </div>
         </div>
