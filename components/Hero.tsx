@@ -40,15 +40,17 @@ export default function Hero() {
                 </div>
         
                 <div>
-                    <div className='relative mr-3 pb-8 text-xl lgl:text-2xl text-textLight md:w-3/4'>
-                    {text.map((line, index) => (
-                            <div
-                                key={index}
-                                className={`animated-text ${index === currentTextIndex ? 'visible' : 'hidden'}`}
-                            >
-                               Hello, my name is Noor Dibou, I&apos;m a <span className='text-textDark'> {line} </span>
-                    </div>
-                    ))}
+                    <div style={{ height: '135px', display: 'flex', alignItems: 'center', paddingBottom: '40px' }}>
+                        <div className='relative mr-3 text-xl lgl:text-2xl text-textLight md:w-3/4'>
+                            {text.map((line, index) => (
+                                <div
+                                    key={index}
+                                    className={`animated-text ${index === currentTextIndex ? 'visible' : 'hidden'}`}
+                                >
+                                    Hello, my name is Noor Dibou, I&apos;m a <span className='text-textDark'>{line}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className='z-30'>
                 <div className='mr-3 md:pb-12 text-xl lgl:text-2xl text-textLight md:w-4/5'>

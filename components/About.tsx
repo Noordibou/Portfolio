@@ -43,7 +43,7 @@ export default function About() {
               My background in biochemistry gave me an appreciation for the complex balance of systems in our natural world. I care deeply about issues like climate change, pollution, conservation, and animal welfare. As a software engineer now, I&apos;m motivated to use my skills to make a positive difference on these causes.
               <br></br>
               <br></br>
-              There are so many ways technology can empower people and organizations to create change. I get really excited when I can build apps, platforms and tools that promote sustainability, environmental education, animal rights, or improve people&apos; life in general. My goal is to collaborate with others to develop innovative solutions that speak to my values.
+              There are so many ways technology can empower people and organizations to create change. I get really excited when I can build apps, platforms and tools that promote sustainability, environmental education, animal rights, or improve people&apos;s life in general. My goal is to collaborate with others to develop innovative solutions that speak to my values.
               <br></br>
               <br></br>
               I believe technology and environmentalism go hand in hand. By bringing together people from different backgrounds, we can harness the power of software for good. I'm always eager to brainstorm new ideas, let me know if you have any projects in mind where we could apply technology to benefit the planet and its inhabitants..
