@@ -155,7 +155,7 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
           ))}
         </div>
       </div>
-      <div className='w-full absolute top-[17%] md:top-[25%] lgl:top-[36%] md:w-10/12 bg-textDark/80 rounded-md left-0 h-[600px] md:h-[620px] lgl:h-[440px] lgl:skew-x-0 z-0' />
+      <div className='w-full absolute top-[17%] md:top-[25%] lgl:top-[36%] md:w-10/12 bg-textDark/60 rounded-md left-0 h-[600px] md:h-[620px] lgl:h-[440px] lgl:skew-x-0 z-0' />
       </ScrollSection>
     </div>
   );
