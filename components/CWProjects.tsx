@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Section from '../components/Section';
 import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
+import { FiExternalLink } from 'react-icons/fi';
 import { MdExpandMore } from 'react-icons/md';
 import { useInView } from 'react-intersection-observer';
 
@@ -13,7 +14,7 @@ interface CWProjectProps {
   imageUrls: string[];
   description: string;
   techStack: string[];
-  certificate: string;
+  certificate?: string;
 }
 
 type Props = {
@@ -50,29 +51,31 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
         <div>
             <div className='flex justify-center '>
               {imageUrls.map((imageUrl, index) => (
-                <Image
-                  key={index}
-                  className=' md:h-[400px] h-[275px] md:w-[300px] w-40 m-2  object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
-                  src={imageUrl}
-                  alt={title}
-                  width={600}
-                  height={600}
-                />
+               <Image
+               key={index}
+               className={`md:h-[400px] h-[275px] ${imageUrls.length === 1 ? 'md:w-[500px] w-80' : 'md:w-[300px] w-40'} m-2  object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark`}
+               src={imageUrl}
+               alt={title}
+               width={600}
+               height={600}
+             />
               ))}
             </div>
         </div>
         <div className='flex flex-col gap-6 md:justify-center md:items-center items-end justify-between z-10'>
           <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
-          <p className='bg-textDark/40 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
+          <p className='bg-textDark/80 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
+          {certificate && (
             <div className='flex justify-center '>
-                  <Image
-                    className='md:h-[300px] h-[275px] md:w-[500px] w-80 mr-6 object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
-                    src={certificate}
-                    alt={title}
-                    width={600}
-                    height={600}
-                  />
-              </div>
+              <Image
+                className='md:h-[300px] h-[275px] md:w-[500px] w-80 mr-6 object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
+                src={certificate}
+                alt={title}
+                width={600}
+                height={600}
+              />
+            </div>
+          )}
           <ul className='text-xs md:text-sm font-titleFont tracking-wide  flex flex-wrap gap-2 md:gap-5 md:justify-center  justify-end text-textLight pl-14 pr-4'>
             {techStack.map((tech, index) => (
               <li key={index}>{tech}</li>
@@ -82,9 +85,9 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
             <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300 ' href={github} target='_blank'>
               <BsGithub size={20} />
             </a>
-            {/* <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300' href={href} target='_blank'>
+             <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300' href={href} target='_blank'>
               <FiExternalLink size={20} />
-            </a> */}
+            </a> 
           </div>
         </div>
       </div>
@@ -96,7 +99,7 @@ const CWProjects: React.FC<Props> = () => {
   const projects: CWProjectProps[] = [
     {
       title: 'Feeling Friends',
-      href: '',
+      href: 'https://mindful-journal.vercel.app/login',
       github: 'https://github.com/Noordibou/Feeling-Friends',
       imageUrls: ['/ffs1.png', '/fft.png'],
       description: `Feeling Friends is a user-friendly app designed with neurodiverse students in mind. It addresses a range of challenges they may face, including behavioral issues, emotional regulation, social interactions, and executive functioning. The app offers a dual perspective: one for students and one for teachers.<br><br>
@@ -108,6 +111,14 @@ const CWProjects: React.FC<Props> = () => {
       It's worth noting that Feeling Friends was developed collaboratively with a team of UX/UI experts and software engineers during a 3-day hackathon. We are currently working on updating the app to further enhance its capabilities. The app was built using various technologies such as React, Express, Node, MongoDB, Tailwind CSS, and design tools like Figma and Framer Motion, ensuring a seamless and intuitive experience for both students and teachers. Feeling Friends empowers neurodiverse students to express themselves and fosters a supportive and understanding learning environment.`,
       techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'TailwindCSS', 'Figma', 'Framer Motion'],
       certificate: '/ff.jpg'
+    },
+    {
+      title: 'Bottomless Closet',
+      href: 'https://main.d415obh25yr7h.amplifyapp.com/',
+      github: 'https://github.com/sramalho94/bottomlesscloset',
+      imageUrls: ['/bc-main.png'],
+      description: 'Our team secured first place at the Winter General Assembly Hackathon by successfully tackling the challenge of redesigning Bottomless Closet, a New York-based Non-Profit Organization&apos;s website.<br> In just five days, we transformed the website, employing a tech stack that included AWS Amplify for seamless deployment, Next.js with TypeScript and Tailwind for a visually appealing frontend, and a robust Postgres database using Sequelize on the backend. Rigorous testing with Jest ensured the quality of the product.<br> The collaborative effort of our diverse team, with each member contributing unique skills, made the process efficient and enjoyable.',
+      techStack: ['Next.js', 'Node.js', 'Tailwind', 'TypeScript', 'DaisyUI', 'Figma','React Context API', 'Sequelize', 'Jest', 'AWS Amplify'],
     }
   ];
 
@@ -123,7 +134,7 @@ const CWProjects: React.FC<Props> = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
         className='relative max-w-contentContainer  mx-auto top-24  flex flex-col gap-20 py-24 '>
-        <Section title="On the Horizon" />
+        <Section title="Hackathon Projects" />
         {projects.slice(0, visibleProjects).map((project, index) => (
           <div key={index} className='w-full flex flex-col items-center justify-center mt-4 px-4'>
             <div className='flex flex-col xl:flex-row gap-4 px-4'>

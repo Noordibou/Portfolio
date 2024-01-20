@@ -118,8 +118,15 @@ const skillsData: Skill[] = [
   {
     icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/linux.png',
     title: 'Linux',
+  },
+  {
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/figma--v1.png',
+    title: 'Figma',
+  },
+  {
+    icon: 'https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/FFFFFF/external-jest-can-collect-code-coverage-information-from-entire-projects-logo-bold-tal-revivo.png',
+    title: 'Jest',
   }
-
 ];
 
 const Skills: React.FC<Props> = ({ directionLeft }) => {
@@ -148,7 +155,7 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
           ))}
         </div>
       </div>
-      <div className='w-full absolute top-[17%] md:top-[25%] lgl:top-[36%] md:w-10/12 bg-textDark/40 rounded-md left-0 h-[550px] md:h-[600px] lgl:h-[400px] lgl:skew-x-0 z-0' />
+      <div className='w-full absolute top-[17%] md:top-[25%] lgl:top-[36%] md:w-10/12 bg-textDark/80 rounded-md left-0 h-[600px] md:h-[620px] lgl:h-[440px] lgl:skew-x-0 z-0' />
       </ScrollSection>
     </div>
   );

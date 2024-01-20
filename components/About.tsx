@@ -36,7 +36,7 @@ export default function About() {
           <div>
             <h4 className='text-xl md:text-2xl py-8 font-titleFont text-textLight'>Here you will learn {''}
               <span className='underline decoration-textBright/50'>more</span> {''} about me </h4>
-            <p className='text-xs md:text-lg font-titleFont text-[#1d1f0c] font-semibold'>I started my career studying biochemistry in college. I&apos;ve always been fascinated by the molecular foundations of life and nature. But over time, I realized I also have a passion for programming. So I made the switch to software engineering, while still holding onto my love of science.
+            <p className='text-xs md:text-lg font-titleFont text-[#1d1f0c] font-semibold'>I started my career studying biochemistry. I&apos;ve always been fascinated by the molecular foundations of life and nature. But over time, I realized I also have a passion for programming. So I made the switch to software engineering, while still holding onto my love of science.
               <br></br>
               <br></br>
 

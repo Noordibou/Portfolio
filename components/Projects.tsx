@@ -58,7 +58,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, descri
       </Link>
       <div className='w-full xl:w-1/2 flex flex-col gap-6 lg:items-center xl:items-end items-end justify-between  xl:-ml-16 z-10'>
         <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
-        <p className='bg-textDark/40 text-sm md:text-base xl:w-auto lg:w-3/4 p-2 md:p-6 rounded-md mx-4'>{description}</p>
+        <p className='bg-textDark/80 text-sm md:text-base xl:w-auto lg:w-3/4 p-2 md:p-6 rounded-md mx-4'>{description}</p>
         <ul className='text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5  text-textLight pl-14 pr-4 flex-wrap justify-end'>
           {techStack.map((tech, index) => (
             <li key={index}>{tech}</li>
