@@ -51,13 +51,13 @@ const ContactMe: React.FC<Props> = () => {
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)} className='mx-auto w-full px-6 md:px-20 pb-20 max-w-xs '>
-                    <div className='flex flex-col space-y-2'>
-                        <div className='flex flex-col md:flex-row gap-2'>
+                    <div className='flex flex-col space-y-2 '>
+                        <div className='flex flex-col md:flex-row gap-2 '>
                             <input {...register('name')} placeholder='Name' className="contactInput flex-grow" type='text' />
                             <input {...register('email')} placeholder='Email' className="contactInput flex-grow" type='email' />
                         </div>
-                        <input {...register('subject')} placeholder='Subject' className="contactInput" type='text' />
-                        <textarea {...register('message')} placeholder='Message' className="contactInput" />
+                        <input {...register('subject')} placeholder='Subject' className="contactInput " type='text' />
+                        <textarea {...register('message')} placeholder='Message' className="contactInput " />
                         <button type='submit' className='bg-textLight/60 hover:bg-textLight/80 py-4 px-10 rounded-md text-black font-bold text-lg mx-auto w-full md:w-auto'>
                             Send
                         </button>
