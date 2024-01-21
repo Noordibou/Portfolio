@@ -34,7 +34,7 @@ export default function Hero() {
                     Noor Dibou
                 </h1>
                 <div className='z-20'>
-                    <h2 className='text-sm uppercase text-textBright pt-4 pb-2 tracking-[8px] font-bold mdl:tracking-[10px] lgl:tracking-[20px] font-bodyFont'>
+                    <h2 className='text-sm uppercase text-textBright pt-4 pb-4 md:pb-2 tracking-[8px] font-bold mdl:tracking-[10px] lgl:tracking-[20px] font-bodyFont'>
                         Software Engineer
                     </h2>
                 </div>
