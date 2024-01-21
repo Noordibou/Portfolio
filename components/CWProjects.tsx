@@ -53,7 +53,7 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
               {imageUrls.map((imageUrl, index) => (
                <Image
                key={index}
-               className={`md:h-[400px] h-[275px] ${imageUrls.length === 1 ? 'md:w-[500px] w-80' : 'md:w-[300px] w-40'} m-2  object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark`}
+               className={`md:h-[400px] h-[275px] ${imageUrls.length === 1 ? 'md:w-[500px] w-80' : 'md:w-[300px] w-40'} m-2  object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textLight`}
                src={imageUrl}
                alt={title}
                width={600}
@@ -64,11 +64,11 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
         </div>
         <div className='flex flex-col gap-6 md:justify-center md:items-center items-end justify-between z-10'>
           <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
-          <p className='bg-textDark/60 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
+          <p className='bg-textDark/50 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
           {certificate && (
             <div className='flex justify-center '>
               <Image
-                className='md:h-[300px] h-[275px] md:w-[500px] w-80 mr-6 object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textDark'
+                className='md:h-[300px] h-[275px] md:w-[500px] w-80 mr-6 object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textLight'
                 src={certificate}
                 alt={title}
                 width={600}

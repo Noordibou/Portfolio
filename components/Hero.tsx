@@ -34,14 +34,14 @@ export default function Hero() {
                     Noor Dibou
                 </h1>
                 <div className='z-20'>
-                    <h2 className='text-sm uppercase text-textBright pt-4 pb-2 tracking-[8px] font-bold mdl:tracking-[10px] lgl:tracking-[20px]'>
+                    <h2 className='text-sm uppercase text-textBright pt-4 pb-2 tracking-[8px] font-bold mdl:tracking-[10px] lgl:tracking-[20px] font-bodyFont'>
                         Software Engineer
                     </h2>
                 </div>
         
                 <div>
                     <div style={{ height: '135px', display: 'flex', alignItems: 'center', paddingBottom: '40px' }}>
-                        <div className='relative mr-3 text-xl lgl:text-2xl text-textLight md:w-3/4'>
+                        <div className='relative mr-3 text-xl lgl:text-2xl text-textLight md:w-3/4 font-titleFont font-semibold'>
                             {text.map((line, index) => (
                                 <div
                                     key={index}
@@ -53,8 +53,8 @@ export default function Hero() {
                         </div>
                     </div>
                     <div className='z-30'>
-                <div className='mr-3 md:pb-12 text-xl lgl:text-2xl text-textLight md:w-4/5'>
-                    <p>Take a closer look at some of the <Link href='#projects' className=' bg-textLight/40  rounded-lg px-2 pb-1 md:py-2 underline decoration-textBright/50 z-40'>projects</Link> {''} I&apos;ve worked on.
+                <div className='mr-3 md:pb-12 text-xl lgl:text-2xl text-textLight md:w-4/5 font-bodyFont font-semibold'>
+                    <p>Take a closer look at some of the <Link href='#projects' className=' bg-textLight/20 text-textBright rounded-lg px-2 pb-1 md:py-2 underline decoration-textLight/50 z-40 font-normal'>projects</Link> {''} I&apos;ve worked on.
                     </p>
                     </div>
                 </div>

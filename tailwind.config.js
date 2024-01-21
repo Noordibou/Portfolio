@@ -14,14 +14,22 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        titleFont: ['Playfair Display', 'serif'],
-        bodyFont: ['Inter', 'sans- serif'],
-        orb: ['Orbitron', 'sans- serif'],
+        titleFont: ['Roboto Mono',' monospace'],
+        bodyFont: ['Poppins', 'sans-serif'],
         
       },
       boxShadow: {
         navbarShadow: '0px 10px 30px -10px rgba(2, 12, 27, 0.7)',
       },
+      // colors: {
+      //   bodyColor: '#24181B',
+      //   darkColor: '#24181B',
+      //   textBright: '#f27113',
+      //   textLight: '#BA7F8B',
+      //   textDark: '#fbecfd',
+      //   hoverColor: 'rgba(100, 255, 218, 0.1)',
+      //   greyColor: '#7c7c84',
+      // },
       colors: {
         bodyColor: '#f2f0ff',
         textBright: '#f27113',

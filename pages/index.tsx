@@ -34,7 +34,7 @@ function ScrollSection({ children }: ScrollSectionProps) {
 export default function Home() {
   return (
     <>
-      <div className="snap-y snap-mandatory scrollbar-thin font-titleFont scrollbar-track-gray-400/20 scrollbar-thumb-textDark/80 bg-[url('../public/dddepth-191.jpg')] bg-no-repeat bg-cover text-white w-full h-screen overflow-y-scroll overflow-x-hidden z-50"
+      <div className="snap-y snap-mandatory scrollbar-thin font-titleFont scrollbar-track-gray-400/20 scrollbar-thumb-textDark/80 bg-[url('../public/images/blurry_background2.png')] bg-no-repeat bg-cover text-white w-full h-screen overflow-y-scroll overflow-x-hidden z-50"
       >
         <Head>
           <title>Noor Dibou</title>
