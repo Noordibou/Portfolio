@@ -66,7 +66,7 @@ export default function Navbar() {
                     </button>
                 </motion.div>
                 <div
-                    className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden absolute top-16 left-0 w-full bg-[#1f1f1f]/80`}
+                    className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden absolute top-16 h-screen left-0 w-full bg-[#1f1f1f]/80 `}
                 >
                     <ul className='flex flex-col items-center font-titleFont font-semibold gap-4 px-8 py-8 text-bgColor  cursor-pointer '>
 
