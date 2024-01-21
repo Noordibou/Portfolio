@@ -85,7 +85,7 @@ const Projects: React.FC<Props> = () => {
       title: 'Caffeine Chronicles',
       href: 'https://coffee-shop-blog.vercel.app/',
       github: 'https://github.com/Noordibou/Coffee-Shop-Blog',
-      imageUrl: '/public/images/cc1-main.png',
+      imageUrl: '/cc1-main.png',
       description: 'Caffeine Chronicles is a coffee shop review app that allows users to share experiences about cafes through blog posts and profiles. Key features include user authentication, Google maps integration, blogging, and the ability to add, update, and delete shop details.',
 
       techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'TailwindCSS'],
