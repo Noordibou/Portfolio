@@ -31,13 +31,13 @@ export default function Navbar() {
 
 
     return (
-        <div className='sticky top-0 bg-bodyColor/90 shadow-navbarShadow opacity-90 z-50'>
+        <div className='sticky top-0 bg-[#1f1f1f]/80 shadow-navbarShadow opacity-90 z-50'>
             <div className='flex items-center justify-between px-4 py-3'>
                 <motion.div
                     initial={{ x: -100, opacity: 0, scale: 0.5 }}
                     animate={{ x: 0, opacity: 1, scale: 1 }}
                     transition={{ duration: 1.5 }}>
-                    <h2 className='text-4xl lgl:text-5xl font-titleFont text-textBright hover:text-textDark cursor-pointer'>
+                    <h2 className='text-4xl lgl:text-5xl font-titleFont text-textLight hover:text-textDark cursor-pointer'>
                         <Link href='#hero' className='font-titleFont'>ND</Link>
                     </h2>
                 </motion.div>
@@ -66,7 +66,7 @@ export default function Navbar() {
                     </button>
                 </motion.div>
                 <div
-                    className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden absolute top-16 left-0 w-full bg-bodyColor`}
+                    className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden absolute top-16 left-0 w-full bg-[#1f1f1f]/80`}
                 >
                     <ul className='flex flex-col items-center font-titleFont font-semibold gap-4 px-8 py-8 text-bgColor  cursor-pointer '>
 

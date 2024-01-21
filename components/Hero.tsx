@@ -23,7 +23,7 @@ export default function Hero() {
 
     return (
         <section
-        className='relative max-w-contentContainer top-24 md:top-52 mx-auto py-10 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4 z-0'>
+        className="relative max-w-contentContainer top-24 md:top-52 mx-auto py-10 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4  z-0">
         <motion.div className='flex flex-col lgl:flex-row gap-10 '
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

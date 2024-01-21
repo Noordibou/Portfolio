@@ -34,11 +34,11 @@ function ScrollSection({ children }: ScrollSectionProps) {
 export default function Home() {
   return (
     <>
-      <div className="snap-y snap-mandatory scrollbar-thin font-titleFont scrollbar-track-gray-400/20 scrollbar-thumb-textDark/80 bg-[url('../public/images/blurry_background2.png')] bg-no-repeat bg-cover text-white w-full h-screen overflow-y-scroll overflow-x-hidden z-50"
+      <div className="snap-y snap-mandatory scrollbar-thin font-titleFont scrollbar-track-gray-400/20 scrollbar-thumb-textDark/80 bg-[url('../public/images/258.jpg')] bg-no-repeat bg-cover text-white w-full h-screen overflow-y-scroll overflow-x-hidden z-50"
       >
         <Head>
           <title>Noor Dibou</title>
-          <link href="https://icons8.com/icon/TOm8IWyqS5Ne/n" />
+      
         </Head>
 
         <Header />
@@ -48,9 +48,9 @@ export default function Home() {
             <LeftSide />
           </div>
 
-          <div className='h-[88hv] mx-auto p-5 px-10'>
+          <div className="h-[88hv] mx-auto p-5 px-10">
             <ScrollSection>
-              <section id='hero' className='z-30'>
+              <section id='hero' className="z-30 ">
                 <Hero />
               </section>
             </ScrollSection>

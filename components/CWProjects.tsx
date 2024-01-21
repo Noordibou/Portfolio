@@ -64,7 +64,7 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
         </div>
         <div className='flex flex-col gap-6 md:justify-center md:items-center items-end justify-between z-10'>
           <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
-          <p className='bg-textDark/50 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
+          <p className='bg-textDark/10 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
           {certificate && (
             <div className='flex justify-center '>
               <Image
