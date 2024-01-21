@@ -42,7 +42,7 @@ export default function Navbar() {
                     <h2 className='text-4xl lgl:text-5xl font-titleFont text-textLight hover:text-textDark cursor-pointer'>
                         <Link href='#hero' className='font-titleFont'><Image
         src="/dddivided.svg"
-        width={74}
+        width={52}
         height={10}
         alt="Logo"></Image></Link>
                         
