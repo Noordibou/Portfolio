@@ -34,7 +34,7 @@ export default function Navbar() {
 
     return (
         <div className='sticky top-0 bg-[#1f1f1f]/80 shadow-navbarShadow opacity-90 z-50'>
-            <div className='flex items-center justify-between px-4'>
+            <div className='flex items-center justify-between px-4 md:py-2'>
                 <motion.div
                     initial={{ x: -100, opacity: 0, scale: 0.5 }}
                     animate={{ x: 0, opacity: 1, scale: 1 }}
