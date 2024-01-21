@@ -39,7 +39,7 @@ export default function Home() {
         <Head>
           <title>Noor Dibou</title>
           <meta name="description" content="Noor Dibou's Portfolio" />
-          <link rel="icon" href="/dddynamite1.svg" sizes="32x32" />
+          <link rel="icon" href="/dddivided.svg" sizes="32x32" />
         </Head>
 
         <Header />

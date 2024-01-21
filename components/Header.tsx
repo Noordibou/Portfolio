@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 
 export default function Navbar() {
@@ -32,13 +34,18 @@ export default function Navbar() {
 
     return (
         <div className='sticky top-0 bg-[#1f1f1f]/80 shadow-navbarShadow opacity-90 z-50'>
-            <div className='flex items-center justify-between px-4 py-3'>
+            <div className='flex items-center justify-between px-4'>
                 <motion.div
                     initial={{ x: -100, opacity: 0, scale: 0.5 }}
                     animate={{ x: 0, opacity: 1, scale: 1 }}
                     transition={{ duration: 1.5 }}>
                     <h2 className='text-4xl lgl:text-5xl font-titleFont text-textLight hover:text-textDark cursor-pointer'>
-                        <Link href='#hero' className='font-titleFont'>ND</Link>
+                        <Link href='#hero' className='font-titleFont'><Image
+        src="/dddivided.svg"
+        width={74}
+        height={10}
+        alt="Logo"></Image></Link>
+                        
                     </h2>
                 </motion.div>
                 <motion.div
