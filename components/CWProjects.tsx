@@ -46,7 +46,7 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
   const formattedDescription = { __html: description };
 
   return (
-    <div className='w-full items-center justify-center gap-8 top-20 '>
+    <div className='w-full items-center justify-center gap-8 top-24 '>
       <div className='flex flex-col gap-2 md:w-full w-96 '>
         <div>
             <div className='flex justify-center '>
@@ -64,7 +64,7 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
         </div>
         <div className='flex flex-col gap-6 md:justify-center md:items-center items-end justify-between z-10'>
           <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
-          <p className='bg-textDark/10 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
+          <p className='bg-darkColor bg-opacity-70 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
           {certificate && (
             <div className='flex justify-center '>
               <Image
@@ -133,7 +133,7 @@ const CWProjects: React.FC<Props> = () => {
         initial={{ y: -10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className='relative max-w-contentContainer  mx-auto top-24  flex flex-col gap-20 py-24 '>
+        className='relative max-w-contentContainer  mx-auto top-36  lgl:py-36 mdl:py-24 flex flex-col gap-20 pb-24 mt-36  '>
         <Section title="Hackathon Projects" />
         {projects.slice(0, visibleProjects).map((project, index) => (
           <div key={index} className='w-full flex flex-col items-center justify-center mt-4 px-4'>

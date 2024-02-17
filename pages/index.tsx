@@ -65,14 +65,14 @@ export default function Home() {
               </section>
            
 
+              <section id='cwprojects'>
+                <CWProjects />
+              </section>
            
               <section id='projects'>
                 <Projects />
               </section>
 
-              <section id='cwprojects'>
-                <CWProjects />
-              </section>
 
            <ScrollSection>
               <section id='education'>

@@ -58,7 +58,7 @@ const Project: React.FC<ProjectProps> = ({ title, href, github, imageUrl, descri
       </Link>
       <div className='w-full xl:w-1/2 flex flex-col gap-6 lg:items-center xl:items-end items-end justify-between  xl:-ml-16 z-10'>
         <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
-        <p className='bg-textDark/10 text-sm md:text-base xl:w-auto lg:w-3/4 p-2 md:p-6 rounded-md mx-4'>{description}</p>
+        <p className='bg-darkColor bg-opacity-70 text-sm md:text-base xl:w-auto lg:w-3/4 p-2 md:p-6 rounded-md mx-4'>{description}</p>
         <ul className='text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5  text-textLight pl-14 pr-4 flex-wrap justify-end'>
           {techStack.map((tech, index) => (
             <li key={index}>{tech}</li>
@@ -127,7 +127,7 @@ const Projects: React.FC<Props> = () => {
         initial={{ y: -10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className='relative max-w-contentContainer  mx-auto top-36  lgl:py-36 mdl:py-24 flex flex-col gap-20 pb-24 mt-36 '>
+        className='relative max-w-contentContainer  mx-auto top-24  flex flex-col gap-20 py-24 '>
         <Section title="Selected Projects" />
         {projects.slice(0, visibleProjects).map((project, index) => (
           <div key={index} className='w-full flex flex-col items-center justify-center mt-4 px-4'>
