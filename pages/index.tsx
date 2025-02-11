@@ -51,7 +51,7 @@ export default function Home() {
 
           {/* Content area with LeftSide */}
           <div className="relative">
-            <div className="absolute left-10 md:top-10 top-20 md:px-20">
+            <div className="absolute left-10 md:top-10 top-20 md:px-20 xl:px-44">
               <LeftSide />
           </div>
                {/* Background blobs wrapper */}
