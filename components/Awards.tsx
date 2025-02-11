@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Section from '../components/Section';
+import Section from './Section';
 import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
@@ -95,7 +95,7 @@ const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, d
   );
 }
 
-const CWProjects: React.FC<Props> = () => {
+const Awards: React.FC<Props> = () => {
   const projects: CWProjectProps[] = [
     {
       title: 'Feeling Friends',
@@ -157,4 +157,4 @@ const CWProjects: React.FC<Props> = () => {
   );
 }
 
-export default CWProjects;
+export default Awards;

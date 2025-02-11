@@ -48,6 +48,51 @@ module.exports = {
         lgl: '1024px',
         xl: '1280px',
       },
+
+      keyframes: {
+        gradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+        morphBlob: {
+          "0%": {
+            transform: "translate(0, 0) scale(1) rotate(0deg)",
+            borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
+          },
+          "50%": {
+            transform: "translate(100px, -100px) scale(1.3) rotate(90deg)",
+            borderRadius: "30% 70% 70% 30%/50% 40% 60% 50%",
+          },
+          "100%": {
+            transform: "translate(0, 0) scale(1) rotate(0deg)",
+            borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
+          }
+        },
+        morphBlob2: {
+          "0%": {
+            transform: "translate(0, 0) rotate(0) scale(1)",
+            borderRadius: "40% 60% 70% 30%/40% 40% 60% 50%",
+          },
+          "50%": {
+            transform: "translate(-100px, 100px) rotate(180deg) scale(1.3)",
+            borderRadius: "70% 30% 30% 70%/60% 40% 60% 40%",
+          },
+          "100%": {
+            transform: "translate(0, 0) rotate(0) scale(1)",
+            borderRadius: "40% 60% 70% 30%/40% 40% 60% 50%",
+          }
+        }
+      },
+      animation: {
+        'morphBlob': 'morphBlob 8s ease-in-out infinite',
+        'morphBlob2': 'morphBlob2 10s ease-in-out infinite',
+        'gradient': 'gradient 6s linear infinite',
+      },
+     
+      backgroundSize: {
+        '300%': '300%',
+      },
     },
   },
   plugins: [require('tailwind-scrollbar')],

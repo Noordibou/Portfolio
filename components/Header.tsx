@@ -1,113 +1,172 @@
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-
-
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-
-    useEffect(() => {
-        const handleClickOutside = (event: Event) => {
-            if (event.target && isHTMLElement(event.target)) {
-                if (!event.target.closest('nav')) {
-                    setIsMenuOpen(false);
-                }
-            }
+  useEffect(() => {
+    const handleClickOutside = (event: Event) => {
+      if (event.target && isHTMLElement(event.target)) {
+        if (!event.target.closest("nav")) {
+          setIsMenuOpen(false);
         }
-        function isHTMLElement(target: EventTarget): target is HTMLElement {
-            return target instanceof HTMLElement;
-        }
-
-        document.addEventListener('click', handleClickOutside);
-        return () => document.removeEventListener('click', handleClickOutside);
-    }, []);
-
-    function toggleMenu() {
-        setIsMenuOpen(prev => !prev);
+      }
+    };
+    function isHTMLElement(target: EventTarget): target is HTMLElement {
+      return target instanceof HTMLElement;
     }
 
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
 
+  // Add effect to prevent scrolling when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
-    return (
-        <div className='sticky top-0 bg-[#1f1f1f]/80 shadow-navbarShadow opacity-90 z-50'>
-            <div className='flex items-center justify-between px-4 md:py-2'>
-                <motion.div
-                    initial={{ x: -100, opacity: 0, scale: 0.5 }}
-                    animate={{ x: 0, opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.5 }}>
-                    <h2 className='text-4xl lgl:text-5xl font-titleFont text-textLight hover:text-textDark cursor-pointer'>
-                        <Link href='#hero' className='font-titleFont'><Image
-        src="/dddivided.svg"
-        width={52}
-        height={10}
-        alt="Logo"></Image></Link>
-                        
-                    </h2>
-                </motion.div>
-                <motion.div
-                    initial={{ x: 500, opacity: 0, scale: 0.5 }}
-                    animate={{ x: 0, opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.2 }}>
-                    <button
-                        className='block lg:hidden text-bgColor p-2 text-textDark hover:text-textBright'
-                        onClick={toggleMenu}
-                    >
-                        <svg
-                            className='w-6 h-6'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
-                        >
-                            <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                strokeWidth={2}
-                                d='M4 6h16M4 12h16M4 18h16'
-                            />
-                        </svg>
-                    </button>
-                </motion.div>
-                <div
-                    className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden absolute top-16 h-screen left-0 w-full bg-[#1f1f1f]/80 `}
-                >
-                    <ul className='flex flex-col items-center font-titleFont font-semibold gap-4 px-8 py-8 text-bgColor  cursor-pointer '>
+  function toggleMenu() {
+    setIsMenuOpen((prev) => !prev);
+  }
 
-                        <Link className='py-2 text-textDark hover:text-textBright' href='#hero'>Home</Link>
-                        <Link className='py-2 text-textDark hover:text-textBright' href='#about'>About</Link>
-                        <Link className='py-2 text-textDark hover:text-textBright' href='#skills'>Skills</Link>
-                        <Link className='py-2 text-textDark hover:text-textBright' href='#projects'>Projects</Link>
-                        <Link className='py-2 text-textDark hover:text-textBright' href='#contact'>Contact</Link>
-                        <Link className='py-2 px-4 font-titleFont rounded-md border border-textBright hover:bg-textBright/30 flex items-center justify-between uppercase text-textDark cursor-pointer' href='/NoorDibou.pdf' target='_blank' >Resume</Link>
-                    </ul>
-                </div>
-                <motion.ul
-                    initial={{ x: 500, opacity: 0, scale: 0.5 }}
-                    animate={{ x: 0, opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.5 }}
-                    className='hidden lg:flex justify-center gap-6 text-bgColor uppercase text-[18px] font-titleFont'>
-                    <Link href='#hero' className='py-2 text-textDark hover:text-textBright' >Home</Link >
-                    <Link href='#about' className='py-2 text-textDark hover:text-textBright' >About</Link >
-                    <Link href='#skills' className='py-2 text-textDark hover:text-textBright' >Skills</Link>
-                    <Link href='#projects' className='py-2 text-textDark hover:text-textBright' >Projects</Link>
-                    <Link href='#contact' className='py-2 text-textDark hover:text-textBright' >Contact</Link>
-                    <Link href='/NoorDibou.pdf' target='_blank' >
-                        <motion.button
-                            initial={{ x: 500, opacity: 0, scale: 0.5 }}
-                            animate={{ x: 0, opacity: 1, scale: 1 }}
-                            transition={{ duration: 1.5 }}
-                            className='py-2 px-4 font-titleFont rounded-md border border-textBright hover:bg-textBright/30 flex items-center justify-between uppercase text-textDark cursor-pointer'>
-                            Resume
-                        </motion.button>
-                    </Link>
-                </motion.ul>
+  return (
+    <nav className="mx-14">
+      <div className="flex items-center justify-end ">
+        <motion.div
+          initial={{ x: 500, opacity: 0, scale: 0.5 }}
+          animate={{ x: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2 }}
+          className="relative z-50"
+        >
+          <button
+            className="block lg:hidden text-bgColor p-2 my-4 text-textDark hover:text-textBright border border-gray-600 rounded-md"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            )}
+          </button>
+        </motion.div>
+        
+        {/* Mobile Menu */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isMenuOpen ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } lg:hidden fixed inset-0 bg-slate-950 z-40`}
+        >
+          <div className="flex items-center justify-center h-full ">
+            <ul className="flex flex-col items-center font-titleFont font-semibold gap-8 text-bgColor ">
+              <Link
+                className="text-3xl py-2 text-textDark hover:text-textBright"
+                href="#about"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                className="text-3xl py-2 text-textDark hover:text-textBright"
+                href="#projects"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Projects
+              </Link>
+              <Link
+                className="text-3xl py-2 text-textDark hover:text-textBright"
+                href="#contact"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link
+                className="text-3xl py-2 px-4 font-titleFont rounded-md border border-textBright hover:bg-textBright/30 flex items-center justify-between uppercase text-textDark"
+                href="/NoorDibou.pdf"
+                target="_blank"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Resume
+              </Link>
+            </ul>
+          </div>
+        </motion.div>
 
-            </div>
-        </div>
-
-    )
+        {/* Desktop Menu */}
+        <motion.div
+          initial={{ x: 500, opacity: 0, scale: 0.5 }}
+          animate={{ x: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
+          className="hidden lg:block "
+        >
+          <ul className="flex justify-center gap-6 text-bgColor uppercase text-[15px] font-titleFont border border-slate-800 rounded-lg px-4 py-2 backdrop-blur-lg">
+            <Link
+              href="#about"
+              className="py-2 text-textDark hover:text-textBright"
+            >
+              About
+            </Link>
+            <Link
+              href="#projects"
+              className="py-2 text-textDark hover:text-textBright"
+            >
+              Projects
+            </Link>
+            <Link
+              href="#contact"
+              className="py-2 text-textDark hover:text-textBright"
+            >
+              Contact
+            </Link>
+            <Link href="/NoorDibou.pdf" target="_blank">
+              <motion.button
+                initial={{ x: 500, opacity: 0, scale: 0.5 }}
+                animate={{ x: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 1.5 }}
+                className="py-2 px-4 font-titleFont rounded-md border border-textBright hover:bg-textBright/30 flex items-center justify-between uppercase text-textDark cursor-pointer"
+              >
+                Resume
+              </motion.button>
+            </Link>
+          </ul>
+        </motion.div>
+      </div>
+    </nav>
+  );
 }
