@@ -25,34 +25,31 @@ function ScrollSection({ children }: ScrollSectionProps) {
 
 export default function About() {
   return (
-    <div className='relative max-w-contentContainer mx-auto py-8 lg:py-32 md:py-24 flex flex-col gap-20'>
-      
-    <ScrollSection>
-      <motion.div
-      initial={{ y: -10, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, delay: 0.8 }}>
-        < Section title="About" />
-        <div className='flex flex-col lgl:flex-row gap-10 '>
-          <div>
-            <h4 className='text-xl md:text-2xl py-8 font-bodyFont text-textLight'>Here you will learn {''}
-              <span className='underline decoration-textBright/50'>more</span> {''} about me </h4>
-            <p className='text-xs md:text-lg font-titleFont text-textDark font-semibold'>I started my career studying biochemistry. I&apos;ve always been fascinated by the molecular foundations of life and nature. But over time, I realized I also have a passion for programming. So I made the switch to software engineering, while still holding onto my love of science.
-              <br></br>
-              <br></br>
-
-              My background in biochemistry gave me an appreciation for the complex balance of systems in our natural world. I care deeply about issues like climate change, pollution, conservation, and animal welfare. As a software engineer now, I&apos;m motivated to use my skills to make a positive difference on these causes.
-              <br></br>
-              <br></br>
-              There are so many ways technology can empower people and organizations to create change. I get really excited when I can build apps, platforms and tools that promote sustainability, environmental education, animal rights, or improve people&apos;s life in general. My goal is to collaborate with others to develop innovative solutions that speak to my values.
-              <br></br>
-              <br></br>
-              I believe technology and environmentalism go hand in hand. By bringing together people from different backgrounds, we can harness the power of software for good. I'm always eager to brainstorm new ideas, let me know if you have any projects in mind where we could apply technology to benefit the planet and its inhabitants..
-            </p>
+    <div className='max-w-6xl mx-auto px-4 lg:py-32 md:py-24 flex flex-col gap-20'>
+      <ScrollSection>
+        <motion.div
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <Section title="About" />
+          <div className='flex flex-col lgl:flex-row gap-10'>
+            <div>
+              <h4 className='text-xl md:text-2xl py-8 font-bodyFont text-secondaryColor'>
+                Here you will learn {''}
+                <span className='underline decoration-titleColor/50'>more</span> {''} about me
+              </h4>
+              <p className='text-xs md:text-lg font-bodyFont text-primaryColor'>
+                From biochemistry to software engineering, my journey has been driven by curiosity and a desire to make a difference. My scientific background has shaped my approach to problem-solving, giving me a unique perspective on complex systems and their interactions.
+                <br /><br />
+                This perspective led me to my current role as a software engineer at the <span className="font-bold">National Center for Computational Hydroscience and Engineering (NCCHE)</span>. Here, I work on transformative projects like DDS-WISE and AIMS, developing systems that play crucial roles in flood prediction and dam safety analysis. These tools help communities prepare for natural disasters and protect vital infrastructure, directly contributing to public safety and environmental resilience.
+                <br /><br />
+                Through this work, I've seen firsthand how technology can create meaningful change. Whether it's modeling flood impacts, building sustainable platforms, or developing environmental protection tools, I remain passionate about projects that make a real difference in people's lives and our environment.
+              </p>
+            </div>
           </div>
-        </div>
-      </motion.div>
-    </ScrollSection>
+        </motion.div>
+      </ScrollSection>
     </div>
-  )
+  );
 }

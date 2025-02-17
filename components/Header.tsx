@@ -38,7 +38,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="mx-14">
+    <nav className="mx-14 -mt-4 md:mt-auto">
       <div className="flex items-center justify-end ">
         <motion.div
           initial={{ x: 500, opacity: 0, scale: 0.5 }}
@@ -47,7 +47,7 @@ export default function Navbar() {
           className="relative z-50"
         >
           <button
-            className="block lg:hidden text-bgColor p-2 my-4 text-textDark hover:text-textBright border border-gray-600 rounded-md"
+            className="block lg:hidden text-bgColor p-2 my-4 text-primaryColor hover:text-secondaryColor border border-gray-600 rounded-md backdrop-blur-lg"
             onClick={toggleMenu}
           >
             {isMenuOpen ? (
@@ -96,28 +96,28 @@ export default function Navbar() {
           <div className="flex items-center justify-center h-full ">
             <ul className="flex flex-col items-center font-titleFont font-semibold gap-8 text-bgColor ">
               <Link
-                className="text-3xl py-2 text-textDark hover:text-textBright"
+                className="text-3xl py-2 text-primaryColor hover:text-secondaryColor"
                 href="#about"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
-                className="text-3xl py-2 text-textDark hover:text-textBright"
+                className="text-3xl py-2 text-primaryColor hover:text-secondaryColor"
                 href="#projects"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projects
               </Link>
               <Link
-                className="text-3xl py-2 text-textDark hover:text-textBright"
+                className="text-3xl py-2 text-primaryColor hover:text-secondaryColor"
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
               <Link
-                className="text-3xl py-2 px-4 font-titleFont rounded-md border border-textBright hover:bg-textBright/30 flex items-center justify-between uppercase text-textDark"
+                className="text-3xl py-2 px-4 font-titleFont rounded-md border border-secondaryColor hover:bg-secondaryColor/30 flex items-center justify-between uppercase text-primaryColor"
                 href="/NoorDibou.pdf"
                 target="_blank"
                 onClick={() => setIsMenuOpen(false)}
@@ -138,19 +138,19 @@ export default function Navbar() {
           <ul className="flex justify-center gap-6 text-bgColor uppercase text-[15px] font-titleFont border border-slate-800 rounded-lg px-4 py-2 backdrop-blur-lg">
             <Link
               href="#about"
-              className="py-2 text-textDark hover:text-textBright"
+              className="py-2 text-primaryColor hover:text-secondaryColor"
             >
               About
             </Link>
             <Link
               href="#projects"
-              className="py-2 text-textDark hover:text-textBright"
+              className="py-2 text-primaryColor hover:text-secondaryColor"
             >
               Projects
             </Link>
             <Link
               href="#contact"
-              className="py-2 text-textDark hover:text-textBright"
+              className="py-2 text-primaryColor hover:text-secondaryColor"
             >
               Contact
             </Link>
@@ -159,7 +159,7 @@ export default function Navbar() {
                 initial={{ x: 500, opacity: 0, scale: 0.5 }}
                 animate={{ x: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5 }}
-                className="py-2 px-4 font-titleFont rounded-md border border-textBright hover:bg-textBright/30 flex items-center justify-between uppercase text-textDark cursor-pointer"
+                className="py-2 px-4 font-titleFont rounded-md border border-secondaryColor hover:bg-secondaryColor/30 flex items-center justify-between uppercase text-primaryColor cursor-pointer"
               >
                 Resume
               </motion.button>

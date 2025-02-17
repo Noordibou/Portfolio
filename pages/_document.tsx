@@ -8,7 +8,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap" rel="stylesheet" />
       </Head>
-      <body>
+      <body className='bg-slate-950'>
         <Main />
         <NextScript />
       </body>

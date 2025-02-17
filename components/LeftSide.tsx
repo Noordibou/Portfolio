@@ -10,14 +10,14 @@ export default function LeftSide() {
             className="h-full flex flex-col items-start justify-start gap-2"
         >
             <div className="flex flex-col items-start gap-2 -mb-36">
-                <span className="text-textDark font-titleFont tracking-widest text-sm  ">
+                <span className="text-primaryColor font-titleFont tracking-widest text-sm  ">
                     Based in
                 </span>
-                <span className="text-textDark font-titleFont tracking-widest text-sm  ">
+                <span className="text-primaryColor font-titleFont tracking-widest text-sm  ">
                     Dallas, United States
                 </span>
             </div>
-            {/* <div className="w-[2px] h-44 bg-textDark" /> */}
+            {/* <div className="w-[2px] h-44 bg- primaryColor" /> */}
         </motion.div>
     );
 }

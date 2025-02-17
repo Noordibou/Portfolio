@@ -14,8 +14,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        titleFont: ['Roboto Mono',' monospace'],
+        titleFont: ['Expletus Sans','serif'],
         bodyFont: ['Poppins', 'sans-serif'],
+        accentFont: ['Yusei Magic', 'serif'],
         
       },
       boxShadow: {
@@ -23,18 +24,17 @@ module.exports = {
       },
       colors: {
         bodyColor: '#24181B',
-        darkColor: '#24181B',
-        textBright: '#c6b0eb',
-        textLight: '#f27113',
-        textDark: '#e5fbff',
+        titleColor: '#bae6fd',
+        primaryColor: '#f9fafb',
+        secondaryColor: '#f27113',
+        thirdColor: '#9ca3af',
         hoverColor: 'rgba(100, 255, 218, 0.1)',
-        greyColor: '#7c7c84',
       },
       // colors: {
       //   bodyColor: '#f2f0ff',
-      //   textBright: '#f27113',
-      //   textLight: '#451952',
-      //   textDark: '#36391a',
+      //   secondaryColor: '#f27117',
+      //   titleColor: '#451952',
+      //    thirdColor: '#36391a',
       //   hoverColor: 'rgba(100, 255, 218, 0.1)',
       //   greyColor: '#7c7c84',
       // },

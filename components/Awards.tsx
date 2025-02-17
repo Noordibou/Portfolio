@@ -1,160 +1,103 @@
-import React, { useState } from 'react';
+// pages/awards/index.tsx
+import React from 'react';
 import { motion } from 'framer-motion';
-import Section from './Section';
+import Link from 'next/link';
 import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
-import { MdExpandMore } from 'react-icons/md';
-import { useInView } from 'react-intersection-observer';
+import Section from '../components/Section';
+import { AwardedProject, awardedProjects } from '../types/award';
 
-interface CWProjectProps {
-  title: string;
-  href: string;
-  github: string;
-  imageUrls: string[];
-  description: string;
-  techStack: string[];
-  certificate?: string;
-}
+const AwardsSection: React.FC = () => {
+  return (
+    <motion.div
+      initial={{ y: -10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="max-w-6xl mx-auto px-4 py-10 mt-32"
+    >
+      <Section title="Award-Winning Projects" />
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
+        {awardedProjects.map((project, index) => (
+          <motion.div
+            key={`${project.title}-${index}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="flex flex-col rounded-lg overflow-hidden h-full group"
+          >
+            <Link href={`/awards/${project.slug}`} className="relative">
+              <div className="relative w-full h-96">
+                <Image
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  fill
+                  priority
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:scale-105">
+                  <div className="flex justify-center items-center h-full">
+                    <span className="text-white text-sm font-medium">View Details</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
 
-type Props = {
-  directionLeft?: boolean;
+            <div className="p-6 flex flex-col flex-grow">
+              <Link 
+                href={`/awards/${project.slug}`}
+                className="text-xl font-bold text-primaryColor mb-2 hover:text-secondaryColor transition-colors"
+              >
+                {project.title}
+              </Link>
+
+              <div className="mb-3">
+                <span className="inline-block bg-titleColor text-black px-3 py-1 rounded-full text-sm font-semibold">
+                  {project.award.title}
+                </span>
+                
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.techStack.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="px-2 py-1 bg-secondaryColor/60 rounded-full text-xs text-primaryColor"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <p className="text-sm text-stone-300 mb-4">
+                {project.description}
+              </p>
+
+              <div className="flex gap-4 mt-auto">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-thirdColor hover:text-secondaryColor transition-colors"
+                >
+                  <BsGithub size={20} />
+                </a>
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-thirdColor hover:text-secondaryColor transition-colors"
+                >
+                  <FiExternalLink size={20} />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
 };
 
-interface ScrollSectionProps {
-  children: React.ReactNode;
-}
-
-function ScrollSection({ children }: ScrollSectionProps) {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2
-  });
-
-  return (
-    <div
-      ref={ref}
-      style={{ opacity: inView ? 1 : 0, transition: 'opacity 0.5s' }}
-    >
-      {children}
-    </div>
-  );
-}
-
-const CWProject: React.FC<CWProjectProps> = ({ title, href, github, imageUrls, description, techStack, certificate }) => {
-  // Use the dangerouslySetInnerHTML prop to render HTML
-  const formattedDescription = { __html: description };
-
-  return (
-    <div className='w-full items-center justify-center gap-8 top-24 '>
-      <div className='flex flex-col gap-2 md:w-full w-96 '>
-        <div>
-            <div className='flex justify-center '>
-              {imageUrls.map((imageUrl, index) => (
-               <Image
-               key={index}
-               className={`md:h-[400px] h-[275px] ${imageUrls.length === 1 ? 'md:w-[500px] w-80' : 'md:w-[300px] w-40'} m-2  object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textLight`}
-               src={imageUrl}
-               alt={title}
-               width={600}
-               height={600}
-             />
-              ))}
-            </div>
-        </div>
-        <div className='flex flex-col gap-6 md:justify-center md:items-center items-end justify-between z-10'>
-          <h3 className='text-2xl text-textDark font-bold tracking-wide pr-4'>{title}</h3>
-          <p className='bg-darkColor bg-opacity-70 text-sm md:text-base p-2 md:p-6 rounded-md mx-4' dangerouslySetInnerHTML={formattedDescription}></p>
-          {certificate && (
-            <div className='flex justify-center '>
-              <Image
-                className='md:h-[300px] h-[275px] md:w-[500px] w-80 mr-6 object-fit rounded-md border-t-2 border-l-2 border-r-4 border-b-4 border-textLight'
-                src={certificate}
-                alt={title}
-                width={600}
-                height={600}
-              />
-            </div>
-          )}
-          <ul className='text-xs md:text-sm font-titleFont tracking-wide  flex flex-wrap gap-2 md:gap-5 md:justify-center  justify-end text-textLight pl-14 pr-4'>
-            {techStack.map((tech, index) => (
-              <li key={index}>{tech}</li>
-            ))}
-          </ul>
-          <div className='text-xl flex gap-4 pr-4'>
-            <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300 ' href={github} target='_blank'>
-              <BsGithub size={20} />
-            </a>
-             <a className='hover:text-textBright text-textDark cursor-pointer hover:-translate-y-2 transition-all duration-300' href={href} target='_blank'>
-              <FiExternalLink size={20} />
-            </a> 
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const Awards: React.FC<Props> = () => {
-  const projects: CWProjectProps[] = [
-    {
-      title: 'Feeling Friends',
-      href: 'https://mindful-journal.vercel.app/login',
-      github: 'https://github.com/Noordibou/Feeling-Friends',
-      imageUrls: ['/ffs1.png', '/fft.png'],
-      description: `Feeling Friends is a user-friendly app designed with neurodiverse students in mind. It addresses a range of challenges they may face, including behavioral issues, emotional regulation, social interactions, and executive functioning. The app offers a dual perspective: one for students and one for teachers.<br><br>
-
-      In the student view, at the beginning and end of each school day, students engage with a series of animated pages. They express their current emotions, outline their goals and needs for the day, and communicate with their teacher about how they're feeling. The app then provides tips and guidance to help them navigate these emotions effectively.<br><br>
-      
-      On the teacher's side, they can easily manage their class or classes, access student profiles, and make notes to better understand and support their students.<br><br>
-    
-      It's worth noting that Feeling Friends was developed collaboratively with a team of UX/UI experts and software engineers during a 3-day hackathon. We are currently working on updating the app to further enhance its capabilities. The app was built using various technologies such as React, Express, Node, MongoDB, Tailwind CSS, and design tools like Figma and Framer Motion, ensuring a seamless and intuitive experience for both students and teachers. Feeling Friends empowers neurodiverse students to express themselves and fosters a supportive and understanding learning environment.`,
-      techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'TailwindCSS', 'Figma', 'Framer Motion'],
-      certificate: '/ff.jpg'
-    },
-    {
-      title: 'Bottomless Closet',
-      href: 'https://main.d415obh25yr7h.amplifyapp.com/',
-      github: 'https://github.com/sramalho94/bottomlesscloset',
-      imageUrls: ['/bc-main.png'],
-      description: 'Our team secured first place at the Winter General Assembly Hackathon by successfully tackling the challenge of redesigning Bottomless Closet, a New York-based Non-Profit Organization&apos;s website.<br> In just five days, we transformed the website, employing a tech stack that included AWS Amplify for seamless deployment, Next.js with TypeScript and Tailwind for a visually appealing frontend, and a robust Postgres database using Sequelize on the backend. Rigorous testing with Jest ensured the quality of the product.<br> The collaborative effort of our diverse team, with each member contributing unique skills, made the process efficient and enjoyable.',
-      techStack: ['Next.js', 'Node.js', 'Tailwind', 'TypeScript', 'DaisyUI', 'Figma','React Context API', 'Sequelize', 'Jest', 'AWS Amplify'],
-    }
-  ];
-
-  const [visibleProjects, setVisibleProjects] = useState(2);
-  const showMoreProjects = () => {
-    setVisibleProjects(visibleProjects + 2);
-  };
-
-  return (
-    <ScrollSection>
-      <motion.div
-        initial={{ y: -10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className='relative max-w-contentContainer  mx-auto top-36  lgl:py-36 mdl:py-24 flex flex-col gap-20 pb-24 mt-36  '>
-        <Section title="Hackathon Projects" />
-        {projects.slice(0, visibleProjects).map((project, index) => (
-          <div key={index} className='w-full flex flex-col items-center justify-center mt-4 px-4'>
-            <div className='flex flex-col xl:flex-row gap-4 px-4'>
-              <CWProject {...project} />
-            </div>
-          </div>
-        ))}
-        {visibleProjects < projects.length && (
-          <div className='w-full flex justify-center'>
-            <button
-              onClick={showMoreProjects}
-              className='flex items-center justify-center  hover:text-textDark/40 text-textDark px-4  rounded-md'
-            >
-              <MdExpandMore size={62} />
-            </button>
-          </div>
-        )}
-      </motion.div>
-    </ScrollSection>
-  );
-}
-
-export default Awards;
+export default AwardsSection;

@@ -138,16 +138,16 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
       // }}
       // transition={{ duration: 1 }}
       // whileInView={{ opacity: 1, x: 0 }}
-      className='relative top-36 md:mt-28 mt-24  lgl:pt-32 mdl:pt-24  mb-24 flex flex-col '
+      className='max-w-6xl mx-auto px-4 mt-32 pb-16 flex flex-col '
       >
         <ScrollSection>
       <Section title="My Toolbox" />
-      <div className='flex flex-col lgl:flex-row pl-2 pt-14 mt-8 md:w-10/12'>
+      <div className='flex flex-col lgl:flex-row  mt-16 '>
         <div className='grid grid-cols-3 lgl:grid-cols-7 md:grid-cols-4 gap-4 items-center justify-center h-full text-md font-bodyFont group relative z-40'>
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className='hover:text-textLight text-xs md:text-lg md:px-6 lg:px-8 md:py-4 cursor-pointer hover:-translate-y-2 transition-all duration-300'
+              className='hover:text-titleColor text-xs md:text-lg md:px-6 lg:px-8 md:py-4 cursor-pointer hover:-translate-y-2 transition-all duration-300'
             >
               <Image width={40} height={40} src={skill.icon} alt={skill.title} />
               <p className='text-xs '>{skill.title}</p>
@@ -155,7 +155,7 @@ const Skills: React.FC<Props> = ({ directionLeft }) => {
           ))}
         </div>
       </div>
-      <div className='w-full absolute top-[14%] md:top-[25%] lgl:top-[36%] md:w-10/12 bg-textDark/10 rounded-md left-0 h-[600px] md:h-[620px] lgl:h-[440px] lgl:skew-x-0 z-0' />
+      <div className='w-full absolute top-[14%] md:top-[25%] lgl:top-[36%] md:w-10/12 bg- thirdColor/10 rounded-md left-0 h-[600px] md:h-[620px] lgl:h-[440px] lgl:skew-x-0 z-0' />
       </ScrollSection>
     </div>
   );

@@ -27,24 +27,24 @@ const ContactMe: React.FC<Props> = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className='relative flex flex-col text-center items-center top-36 py-8'>
             <div className='py-4 gap-8'>
-                <h3 className='flex font-titleFont md:text-xl text-md font-semibold items-center uppercase tracking-[10px] md:tracking-[20px] text-textBright '>Get In Touch</h3>
+                <h3 className='flex font-titleFont md:text-xl text-md font-semibold items-center uppercase tracking-[10px] md:tracking-[20px] text-secondaryColor '>Get In Touch</h3>
             </div>
 
-            <div className='flex flex-col md:space-y-10 space-y-6 text-textDark' >
-                <h4 className='text-md md:text-2xl pt-6 font-semibold text-center'>Whether you have an idea for a project or just want to chat,{' '}<span className='decoration-textBright/50 underline'>feel free to shoot me an email!</span></h4>
+            <div className='flex flex-col md:space-y-10 space-y-6 text-primaryColor' >
+                <h4 className='text-md md:text-2xl pt-6 font-semibold text-center'>Whether you have an idea for a project or just want to chat,{' '}<span className='decoration-secondaryColor/50 underline'>feel free to shoot me an email!</span></h4>
                 <div className='flex items-center space-x-5 justify-center'>
                     <a href='mailto:noordibou.nd@gmail.com' target='_blank'>
-                        <span className='w-10 inline-flex items-center justify-center hover:text-textBright cursor-pointer hover:-translate-y-2 transition-all duration-300'>
+                        <span className='w-10 inline-flex items-center justify-center hover:text-secondaryColor cursor-pointer hover:-translate-y-2 transition-all duration-300'>
                             <FiMail size={24} />
                         </span>
                     </a>
                     <a href='https://github.com/Noordibou' target='_blank'>
-                        <span className='w-10 inline-flex items-center justify-center hover:text-textBright cursor-pointer hover:-translate-y-2 transition-all duration-300'>
+                        <span className='w-10 inline-flex items-center justify-center hover:text-secondaryColor cursor-pointer hover:-translate-y-2 transition-all duration-300'>
                             <BsGithub size={24} />
                         </span>
                     </a>
                     <a href='https://www.linkedin.com/in/noordibou/' target='_blank'>
-                        <span className='w-10  inline-flex items-center justify-center hover:text-textBright cursor-pointer hover:-translate-y-2 transition-all duration-300'>
+                        <span className='w-10  inline-flex items-center justify-center hover:text-secondaryColor cursor-pointer hover:-translate-y-2 transition-all duration-300'>
                             <FiLinkedin size={24} />
                         </span>
                     </a>
@@ -58,7 +58,7 @@ const ContactMe: React.FC<Props> = () => {
                         </div>
                         <input {...register('subject')} placeholder='Subject' className="contactInput " type='text' />
                         <textarea {...register('message')} placeholder='Message' className="contactInput " />
-                        <button type='submit' className='bg-textLight/60 hover:bg-textLight/80 py-4 px-10 rounded-md text-black font-bold text-lg mx-auto w-full md:w-auto'>
+                        <button type='submit' className='bg-titleColor/75 hover:bg-titleColor/90 py-4 px-10 rounded-md text-black font-bold text-lg mx-auto w-full md:w-auto'>
                             Send
                         </button>
                     </div>
