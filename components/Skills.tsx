@@ -126,6 +126,18 @@ const skillsData: Skill[] = [
   {
     icon: 'https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/FFFFFF/external-jest-can-collect-code-coverage-information-from-entire-projects-logo-bold-tal-revivo.png',
     title: 'Jest',
+  },
+  {
+    icon: 'https://img.icons8.com/?size=100&id=7ST6T6xV3OPb&format=png&color=FFFFFF',
+    title: 'Svelte',
+  },
+  {
+    icon: 'https://img.icons8.com/?size=100&id=q5mQxF1KBDAX&format=png&color=FFFFFF',
+    title: 'Leaflet',
+  },
+  {
+    icon: 'https://img.icons8.com/ios-filled/50/FFFFFF/mysql.png',
+    title: 'MySQL',
   }
 ];
 

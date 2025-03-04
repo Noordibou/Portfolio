@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
 import Section from '../components/Section';
-import { AwardedProject, awardedProjects } from '../types/award';
+import { awardedProjects } from '../types/award';
 
 const AwardsSection: React.FC = () => {
   return (
@@ -18,14 +18,14 @@ const AwardsSection: React.FC = () => {
     >
       <Section title="Award-Winning Projects" />
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 ">
         {awardedProjects.map((project, index) => (
           <motion.div
             key={`${project.title}-${index}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="flex flex-col rounded-lg overflow-hidden h-full group"
+            className="flex flex-col rounded-lg overflow-hidden h-full group z-40"
           >
             <Link href={`/awards/${project.slug}`} className="relative">
               <div className="relative w-full h-96">

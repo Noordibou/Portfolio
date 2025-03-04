@@ -31,21 +31,16 @@ export default function About() {
           initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
+          className='flex flex-col z-40'
         >
           <Section title="About" />
-          <div className='flex flex-col lgl:flex-row gap-10'>
+          <div className='flex flex-col lgl:flex-row gap-10 z-40'>
             <div>
               <h4 className='text-xl md:text-2xl py-8 font-bodyFont text-secondaryColor'>
                 Here you will learn {''}
                 <span className='underline decoration-titleColor/50'>more</span> {''} about me
               </h4>
-              <p className='text-xs md:text-lg font-bodyFont text-primaryColor'>
-                From biochemistry to software engineering, my journey has been driven by curiosity and a desire to make a difference. My scientific background has shaped my approach to problem-solving, giving me a unique perspective on complex systems and their interactions.
-                <br /><br />
-                This perspective led me to my current role as a software engineer at the <span className="font-bold">National Center for Computational Hydroscience and Engineering (NCCHE)</span>. Here, I work on transformative projects like DDS-WISE and AIMS, developing systems that play crucial roles in flood prediction and dam safety analysis. These tools help communities prepare for natural disasters and protect vital infrastructure, directly contributing to public safety and environmental resilience.
-                <br /><br />
-                Through this work, I've seen firsthand how technology can create meaningful change. Whether it's modeling flood impacts, building sustainable platforms, or developing environmental protection tools, I remain passionate about projects that make a real difference in people's lives and our environment.
-              </p>
+              <p className='text-sm md:text-lg font-bodyFont text-primaryColor pt-8'> My journey from biochemistry to software engineering reflects my passion for solving complex problems with innovative solutions. I thrive on turning curiosity into action, which led me to join a team at the <span className="font-bold">National Center for Computational Hydroscience and Engineering (NCCHE)</span>. There, I’m helping develop the next generation of tools like <span className="font-bold">DDS-WISE</span> for flood prediction and <span className="font-bold">AIMS</span> for smarter agriculture—2.0 versions set to launch soon. I’m driven by creating technology that protects communities and sustains our environment, and I’m excited to see these projects make a lasting impact. </p>
             </div>
           </div>
         </motion.div>

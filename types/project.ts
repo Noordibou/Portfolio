@@ -14,32 +14,6 @@ export interface Project {
   }
   export const projects: Project[] = [
     {
-      title: 'Caffeine Chronicles',
-      slug: 'caffeine-chronicles',
-      href: 'https://coffee-shop-blog.vercel.app/',
-      github: 'https://github.com/Noordibou/Coffee-Shop-Blog',
-      imageUrl: '/cc1-main.png',
-      description: 'A coffee shop review platform for sharing cafe experiences and discoveries.',
-      longDescription: 'Caffeine Chronicles is a dynamic coffee shop review platform that brings coffee enthusiasts together. Users can create detailed reviews of their favorite cafes, share their experiences through blog posts, and discover new coffee spots in their area. The platform features a user-friendly interface for writing and managing blog posts, complete with image uploads and interactive user profiles.',
-      features: [
-        'User authentication and personalized profiles',
-        'Interactive blog post creation and editing system',
-        'Image upload functionality for cafe photos',
-        'Google Maps integration for cafe locations',
-        'Search and filter functionality for finding specific cafes',
-        'Responsive design for mobile and desktop use'
-      ],
-      challenges: [
-        'Implementing secure user authentication and authorization',
-        'Integrating Google Maps API for location services',
-        'Creating an efficient image upload and storage system',
-        'Designing a responsive and intuitive user interface',
-        'Optimizing database queries for better performance'
-      ],
-      techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'TailwindCSS'],
-      images: ['/cc1-main.png', '/cc-detail1.png', '/cc-detail2.png']
-    },
-    {
       title: 'Time Totes',
       slug: 'time-totes',
       href: 'https://e-shop-unty.vercel.app/',
@@ -66,30 +40,30 @@ export interface Project {
       images: ['/tt1-main.png', '/tt-detail1.png', '/tt-detail2.png']
     },
     {
-      title: 'The Dessert Palette',
-      slug: 'dessert-palette',
-      href: 'https://long-breeze-6908.fly.dev/',
-      github: 'https://github.com/Noordibou/Dessert-Palette-2.0',
-      imageUrl: '/dp-main.png',
-      description: 'Recipe platform featuring categorized dessert recipes and cooking guides.',
-      longDescription: 'The Dessert Palette is a comprehensive recipe platform built with Django and PostgreSQL, focusing on dessert recipes and baking guides. The application allows users to explore, save, and share their favorite dessert recipes, complete with detailed instructions, ingredient lists, and beautiful food photography.',
+      title: 'Caffeine Chronicles',
+      slug: 'caffeine-chronicles',
+      href: 'https://coffee-shop-blog.vercel.app/',
+      github: 'https://github.com/Noordibou/Coffee-Shop-Blog',
+      imageUrl: '/cc1-main.png',
+      description: 'A coffee shop review platform for sharing cafe experiences and discoveries.',
+      longDescription: 'Caffeine Chronicles is a dynamic coffee shop review platform that brings coffee enthusiasts together. Users can create detailed reviews of their favorite cafes, share their experiences through blog posts, and discover new coffee spots in their area. The platform features a user-friendly interface for writing and managing blog posts, complete with image uploads and interactive user profiles.',
       features: [
-        'Recipe categorization and tagging system',
-        'User recipe collections and favorites',
-        'Detailed recipe instructions with step-by-step guides',
-        'Recipe rating and review system',
-        'Advanced search with filtering options',
-        'Mobile-responsive design for cooking on the go'
+        'User authentication and personalized profiles',
+        'Interactive blog post creation and editing system',
+        'Image upload functionality for cafe photos',
+        'Google Maps integration for cafe locations',
+        'Search and filter functionality for finding specific cafes',
+        'Responsive design for mobile and desktop use'
       ],
       challenges: [
-        'Designing an efficient database schema for recipe management',
-        'Implementing complex search and filtering functionality',
-        'Creating a user-friendly recipe submission system',
-        'Optimizing image handling for food photography',
-        'Building a responsive layout for various screen sizes'
+        'Implementing secure user authentication and authorization',
+        'Integrating Google Maps API for location services',
+        'Creating an efficient image upload and storage system',
+        'Designing a responsive and intuitive user interface',
+        'Optimizing database queries for better performance'
       ],
-      techStack: ['Django', 'PostgreSQL', 'Python', 'Bootstrap'],
-      images: ['/dp-main.png', '/dp-detail1.png', '/dp-detail2.png']
+      techStack: ['React', 'Express', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'TailwindCSS'],
+      images: ['/cc1-main.png', '/cc-detail1.png', '/cc-detail2.png']
     },
     {
       title: 'Projects Planner',
@@ -116,5 +90,31 @@ export interface Project {
       ],
       techStack: ['Express', 'NodeJS', 'MongoDB', 'EJS', 'Bootstrap'],
       images: ['/pp-main1.png']
+    },
+    {
+      title: 'The Dessert Palette',
+      slug: 'dessert-palette',
+      href: 'https://long-breeze-6908.fly.dev/',
+      github: 'https://github.com/Noordibou/Dessert-Palette-2.0',
+      imageUrl: '/dp-main.png',
+      description: 'Recipe platform featuring categorized dessert recipes and cooking guides.',
+      longDescription: 'The Dessert Palette is a comprehensive recipe platform built with Django and PostgreSQL, focusing on dessert recipes and baking guides. The application allows users to explore, save, and share their favorite dessert recipes, complete with detailed instructions, ingredient lists, and beautiful food photography.',
+      features: [
+        'Recipe categorization and tagging system',
+        'User recipe collections and favorites',
+        'Detailed recipe instructions with step-by-step guides',
+        'Recipe rating and review system',
+        'Advanced search with filtering options',
+        'Mobile-responsive design for cooking on the go'
+      ],
+      challenges: [
+        'Designing an efficient database schema for recipe management',
+        'Implementing complex search and filtering functionality',
+        'Creating a user-friendly recipe submission system',
+        'Optimizing image handling for food photography',
+        'Building a responsive layout for various screen sizes'
+      ],
+      techStack: ['Django', 'PostgreSQL', 'Python', 'Bootstrap'],
+      images: ['/dp-main.png', '/dp-detail1.png', '/dp-detail2.png']
     }
   ];

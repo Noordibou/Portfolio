@@ -61,9 +61,6 @@ export default function Home() {
               {/* Second blob */}
               <div className="absolute mt-64 -left-20 lg:left-20 w-[500px] h-[500px] bg-gradient-to-tr from-blue-500/40 to-cyan-500/40 rounded-[40%_60%_70%_30%/40%_40%_60%_50%] filter blur-[80px] z-10 animate-morphBlob2"></div>
             </div>
-            {/* <div className="absolute -top-20 -right-60 w-[500px] h-[500px] bg-red-800/30 rounded-full filter blur-[128px]"></div> */}
-
-            {/* Background blobs wrapper - full width */}
           </div>
 
           {/* Main content sections */}
@@ -80,6 +77,7 @@ export default function Home() {
               </section>
 
               <section id="about">
+              <div className="absolute -right-20 lg:right-20 w-[600px] h-[600px] bg-gradient-to-br from-blue-500/40 to-cyan-500/40 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] filter blur-[70px] animate-morphBlob z-10"></div>
                 <About />
               </section>
 
@@ -88,11 +86,13 @@ export default function Home() {
               </section>
 
               <section id="skills">
+              <div className="absolute  -left-20 lg:left-30 w-[500px] h-[500px] bg-gradient-to-tr from-red-700/30 to-red-900/30 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] filter blur-[80px] z-10 animate-morphBlob2"></div> 
                 <Skills />
               </section>
 
               <ScrollSection>
                 <section id="education">
+                <div className="absolute -right-20 lg:right-20 w-[600px] h-[600px] bg-gradient-to-br from-blue-500/40 to-cyan-500/40 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] filter blur-[70px] animate-morphBlob z-10"></div>
                   <Education />
                 </section>
               </ScrollSection>

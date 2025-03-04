@@ -40,8 +40,8 @@ const EducationItem = ({ title, institution }: { title: string, institution: str
     initial={{ y: -10, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.6, delay: 1 }}
-    className=" py-4">
-    <h3 className="text-lg font-semibold text-secondaryColor">{title}</h3>
-    <p className="text-thirdColor">{institution}</p>
+    className=" py-4 flex flex-col">
+    <h3 className="text-lg font-semibold text-secondaryColor z-40">{title}</h3>
+    <p className="text-thirdColor z-40">{institution}</p>
   </motion.div>
 );

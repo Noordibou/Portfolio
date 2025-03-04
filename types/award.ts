@@ -33,7 +33,7 @@ export interface Project {
     {
       title: 'Feeling Friends',
       slug: 'feeling-friends',
-      href: 'https://mindful-journal.vercel.app/login',
+      href: 'https://mindful-journal.vercel.app/',
       github: 'https://github.com/Noordibou/Feeling-Friends',
       imageUrl: '/ff-main.png',
       description: 'A user-friendly app designed for neurodiverse students to help with emotional regulation and social interactions.',
